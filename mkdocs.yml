@@ -1,0 +1,32 @@
+site_name: Documentation
+docs_dir: docs/
+# repo_name: 'MarkHershey/docs'
+# repo_url: 'https://github.com/MarkHershey/docs'
+nav:
+    - Home: 'index.md'
+    - Computer Science: 
+      - main: 'cs.md'
+markdown_extensions:
+    - toc:
+        permalink: "#"
+    - pymdownx.highlight
+    - pymdownx.superfences
+    - pymdownx.arithmatex:
+        generic: true
+theme:
+    name: material
+    favicon: img/favicon.ico
+    icon:
+      logo: fontawesome/solid/toilet-paper
+      # logo: img/favicon.svg
+    features:
+      - navigation.tabs
+    palette:
+        scheme: slate
+        primary: lime
+        accent: indigo
+extra_javascript:
+  # - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+copyright: Mark Huang &copy; 2020. All rights reserved.
