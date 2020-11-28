@@ -1,11 +1,17 @@
+# Site Information
 site_name: Documentation
+site_description: Mark Huang's Personal Documentation
+site_author: Mark Huang
 docs_dir: docs/
+
+# GitHub repository button (shown at the top-right corner)
 # repo_name: 'MarkHershey/docs'
 # repo_url: 'https://github.com/MarkHershey/docs'
-nav:
-    - Home: 'index.md'
-    - Computer Science: 
-      - main: 'cs.md'
+
+# Copyright Declaration (shown at the end of the page)
+copyright: Mark Huang &copy; 2020. All rights reserved.
+
+# Extensions
 markdown_extensions:
     - toc:
         permalink: "#"
@@ -13,6 +19,8 @@ markdown_extensions:
     - pymdownx.superfences
     - pymdownx.arithmatex:
         generic: true
+        
+# Theme Configuration
 theme:
     name: material
     favicon: img/favicon.ico
@@ -25,8 +33,14 @@ theme:
         scheme: slate
         primary: lime
         accent: indigo
+        
 extra_javascript:
   # - javascripts/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-copyright: Mark Huang &copy; 2020. All rights reserved.
+
+# Navigations
+nav:
+    - Home: 'index.md'
+    - Computer Science: 
+      - main: 'cs.md'
