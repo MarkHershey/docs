@@ -43,7 +43,7 @@
 
 ### Textbook Search Engines
 
-- [Textbook Search Engine](http://gen.lib.rus.ec)
+- [LibGen](http://gen.lib.rus.ec)
 
 ---
 
@@ -85,6 +85,7 @@
 
 > - Username: `100xxxx`
 > - Password: your **Network ID** password 
+> - Reset Password [https://sams.sutd.edu.sg/AD_Reset_Help.html](https://sams.sutd.edu.sg/AD_Reset_Help.html)
 
 [SUTD - VPN](https://sutdvpn.sutd.edu.sg/student)
 
@@ -110,18 +111,30 @@
 - [Student Insurance Coverage Info](https://www.mycg.com.sg/sutd#sutd/coverage)
 - [SUTD Map (Web)](https://sutdmap.appspot.com)
 - [Discover SUTD Q&As](https://hackmd.io/MT2rK-89QceRHcFNsXorfg?view#AMADiscoverSUTD)
-- [Discover SUTD Guide](https://discover.sutd.dev/DiscoverSUTD-Guide/index.html#0)
+- [DiscoverSUTD](https://discover.opensutd.org/)
 
 ---
 
+## Community
+
+- Telegram Group: [SUTD Family (Verification Entrance)](https://root.sutd.edu.sg/sutdfamily/)
+- Telegram Channel (ROOT): [ROOT Announcements](https://t.me/SUTDROOTAnnouncements)
+- Facebook Group: [SUTD Family](https://www.facebook.com/groups/522995557746987)
+- Facebook Page: [A Better World By Memes](https://www.facebook.com/SUTDmemes/)
+- Instagram (meme): [@changicollege](https://www.instagram.com/changicollege)
+- Reddit: [r/sutd](https://www.reddit.com/r/sutd/)
+- Discord: [/r/sutd](https://discord.com/invite/gp6Yd3F)
+
+---
 
 ## Telegram Bots
 
-- [EVS Notifications](https://t.me/evs_notification_bot)
-- [SAM](https://t.me/SUTDMapBot)
-- [Food4Me](https://t.me/food4me_bot)
-- [SUTD_ICS](https://t.me/sutd_ics_bot)
-- [Deadline Tracker](https://t.me/shimekiribot)
+- [@SUTDMapBot](https://t.me/SUTDMapBot) is a super handy bot that tells you the room number of any location in SUTD.
+- [@evs_notification_bot](https://t.me/evs_notification_bot) is a bot that checks your hostel aircon credit balance for you.
+- [@sutd_ics_bot](https://t.me/sutd_ics_bot) helps you re-format your class schedule so that you can import them into Google Calendar.
+- [@shimekiribot](https://t.me/shimekiribot) is a bot that keeps track of deadlines. You can add it to your cohort class chat.
+- [@food4me_bot](https://t.me/food4me_bot)
+
 
 ---
 
@@ -129,5 +142,5 @@
 ## Student Organizations 
 
 - [ROOT - SUTD Student Government](https://root.sutd.edu.sg/)
-- [OpenSUTD](https://github.com/OpenSUTD)
+- [OpenSUTD](https://opensutd.org/)
 - [3DC DSC](https://3dcdsc.github.io/About/)

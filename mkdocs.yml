@@ -1,5 +1,5 @@
 # Site Information
-site_name: Documentation
+site_name: WNDI
 site_description: Mark Huang's Personal Documentation
 site_author: Mark Huang
 docs_dir: docs/
@@ -25,7 +25,7 @@ theme:
     name: material
     favicon: img/favicon.ico
     icon:
-      logo: fontawesome/solid/toilet-paper
+      logo: fontawesome/solid/memory
       # logo: img/favicon.svg
     features:
       - navigation.tabs
@@ -41,7 +41,7 @@ extra_javascript:
 
 # Navigations
 nav:
-    - Home: 'index.md'
+    - Homepage: 'index.md'
     - Computer Science: 
       - main: 'cs.md'
     - SUTD:
