@@ -1,6 +1,5 @@
 # SUTD Bookmarks
 
-
 ## Campus Internet Access
 
 [SUTD_WiFi](#)
@@ -41,9 +40,6 @@
 > - Username: your LC username
 > - Password: your LC password
 
-### Textbook Search Engines
-
-- [LibGen](http://gen.lib.rus.ec)
 
 ---
 
@@ -85,7 +81,7 @@
 
 > - Username: `100xxxx`
 > - Password: your **Network ID** password 
-> - Reset Password [https://sams.sutd.edu.sg/AD_Reset_Help.html](https://sams.sutd.edu.sg/AD_Reset_Help.html)
+> - [Reset Your Password](https://sams.sutd.edu.sg/AD_Reset_Help.html)
 
 [SUTD - VPN](https://sutdvpn.sutd.edu.sg/student)
 
@@ -108,10 +104,11 @@
 
 ## Information
 
-- [Student Insurance Coverage Info](https://www.mycg.com.sg/sutd#sutd/coverage)
+- [Cliniflex - Student Insurance Coverage Info](https://www.mycg.com.sg/sutd#sutd/coverage)
 - [SUTD Map (Web)](https://sutdmap.appspot.com)
-- [Discover SUTD Q&As](https://hackmd.io/MT2rK-89QceRHcFNsXorfg?view#AMADiscoverSUTD)
 - [DiscoverSUTD](https://discover.opensutd.org/)
+- [DiscoverSUTD Q&As (2019)](https://hackmd.io/MT2rK-89QceRHcFNsXorfg?view#AMADiscoverSUTD)
+- [Textbook Search Engines - LibGen](http://gen.lib.rus.ec)
 
 ---
 
@@ -124,7 +121,7 @@
 - Instagram (meme): [@changicollege](https://www.instagram.com/changicollege)
 - Reddit: [r/sutd](https://www.reddit.com/r/sutd/)
 - Discord: [/r/sutd](https://discord.com/invite/gp6Yd3F)
-
+- Discourse forum: [SUTDiscourse](https://sutdiscourse.org/login)
 ---
 
 ## Telegram Bots
@@ -143,4 +140,6 @@
 
 - [ROOT - SUTD Student Government](https://root.sutd.edu.sg/)
 - [OpenSUTD](https://opensutd.org/)
-- [3DC DSC](https://3dcdsc.github.io/About/)
+- [3DC - Digital Design & Development Club, Developer Student Club](https://3dcdsc.github.io/About/)
+- [SOAR - SUTD Organization of Autonomous Robotics](https://soar.opensutd.org/)
+- [MRS - Multi Rotor SUTD](https://multirotorsociety.github.io/)
