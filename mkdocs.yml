@@ -44,3 +44,5 @@ nav:
     - Home: 'index.md'
     - Computer Science: 
       - main: 'cs.md'
+    - SUTD:
+      - Bookmarks: 'SUTD/sutd_bookmarks.md'
