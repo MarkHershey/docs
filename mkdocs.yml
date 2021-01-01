@@ -42,7 +42,7 @@ extra_javascript:
 # Navigations
 nav:
     - Homepage: 'index.md'
-    - Computer Science: 
-      - main: 'cs.md'
+    - Documentation:
+      - Docker: 'CS/docker.md'
     - SUTD:
       - Bookmarks: 'SUTD/sutd_bookmarks.md'
