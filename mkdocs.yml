@@ -19,7 +19,7 @@ markdown_extensions:
     - pymdownx.superfences
     - pymdownx.arithmatex:
         generic: true
-        
+
 # Theme Configuration
 theme:
     name: material
@@ -33,7 +33,7 @@ theme:
         scheme: slate
         primary: lime
         accent: indigo
-        
+
 extra_javascript:
   # - javascripts/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -44,5 +44,6 @@ nav:
     - Homepage: 'index.md'
     - Documentation:
       - Docker: 'CS/docker.md'
+      - SSH: 'SSH/ssh.md'
     - SUTD:
       - Bookmarks: 'SUTD/sutd_bookmarks.md'
