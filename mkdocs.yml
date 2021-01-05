@@ -42,8 +42,13 @@ extra_javascript:
 # Navigations
 nav:
     - Homepage: 'index.md'
-    - Documentation:
-      - Docker: 'CS/docker.md'
-      - SSH: 'SSH/ssh.md'
+    - CS:
+      - CS Books: 'cs/cs_books.md'
+    - Dev Docs:
+      - Docker: 'dev/docker.md'
+      - SSH: 'dev/ssh.md'
+      - VIM: 'dev/vim_ref.md'
+      - Linux CLI: 'dev/linux-commands.md'
+      - Linux Distros: 'dev/linux-distros.md'
     - SUTD:
       - Bookmarks: 'SUTD/sutd_bookmarks.md'

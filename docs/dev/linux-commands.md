@@ -8,9 +8,6 @@
 - `echo` print function
 - `sudo reboot` reboot
 - `sudo shutdown -h now` shutdown now
-
-
-
 - `ifconfig`
 - `iwconfig`
 - `ping <domain name | ip address>`
@@ -39,7 +36,7 @@
 - `rmdir some_folder` remove a empty folder
 - `rm -rf some_folder` remove a folder and everything inside
 
->More about removing directories: [How to Remove (Delete) Directory in Linux](https://linuxize.com/post/remove-directory-linux/)
+> More about removing directories: [How to Remove (Delete) Directory in Linux](https://linuxize.com/post/remove-directory-linux/)
 
 - `touch example.txt` create a new file
 - `nano example.txt` edit a file using the nano text editor
