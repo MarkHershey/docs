@@ -9,7 +9,7 @@ docs_dir: docs/
 # repo_url: 'https://github.com/MarkHershey/docs'
 
 # Copyright Declaration (shown at the end of the page)
-copyright: Mark Huang &copy; 2020. All rights reserved.
+copyright: Mark Huang &copy; 2019-2021. All rights reserved.
 
 # Extensions
 markdown_extensions:
@@ -23,10 +23,9 @@ markdown_extensions:
 # Theme Configuration
 theme:
     name: material
-    favicon: img/favicon.ico
+    favicon: img/memory-solid.svg
     icon:
       logo: fontawesome/solid/memory
-      # logo: img/favicon.svg
     features:
       - navigation.tabs
     palette:
@@ -41,14 +40,15 @@ extra_javascript:
 
 # Navigations
 nav:
-    - Homepage: 'index.md'
-    - CS:
-      - CS Books: 'cs/cs_books.md'
-    - Dev Docs:
+    - Home: 'index.md'
+    - Dev References:
       - Docker: 'dev/docker.md'
       - SSH: 'dev/ssh.md'
       - VIM: 'dev/vim_ref.md'
       - Linux CLI: 'dev/linux-commands.md'
       - Linux Distros: 'dev/linux-distros.md'
+      - Computer Science Stuff:
+        - CS Books: 'cs/cs_books.md'
+        - CS Education at SUTD: 'cs/cs_edu_istd.md'
     - SUTD:
-      - Bookmarks: 'SUTD/sutd_bookmarks.md'
+      - SUTD Bookmarks: 'SUTD/sutd_bookmarks.md'
