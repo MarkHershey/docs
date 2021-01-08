@@ -2,15 +2,23 @@
 
 !!! tldr ""
 
-    Hi there! 
+    **Hey there** :fontawesome-regular-laugh-wink:
 
     This is a personal documentation space. 
-
     Feel free to look around.
+
+    ---
+
+    View Source: 
+
+    - :fontawesome-brands-github:{: .github } [MarkHershey / docs](https://github.com/MarkHershey/docs)
+    - Raising issues about my mistakes, creating pull requests for improvements, or any kind of contributions is warmly welcomed.
+
+## Hello world!
 
 === "C"
 
-    ``` c
+    ``` c linenums="1"
     #include <stdio.h>
 
     int main(void) {
@@ -21,7 +29,7 @@
 
 === "C++"
 
-    ``` c++
+    ``` c++ linenums="1"
     #include <iostream>
 
     int main(void) {
@@ -32,14 +40,28 @@
 
 === "Java"
 
-    ``` java
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    ``` java linenums="1"
+    class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!"); 
+        }
     }
     ```
 
 === "Python"
 
-    ``` python
-    print("Hello world!")
+    ``` python linenums="1"
+    def main():
+        print("Hello world!")
+    ```
+
+=== "Go"
+
+    ``` go linenums="1"
+    package main
+
+    import "fmt"
+    func main() {
+        fmt.Println("hello world")
+    }
     ```

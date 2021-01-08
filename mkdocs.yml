@@ -1,6 +1,6 @@
 # Site Information
 site_name: "WNDI"
-site_description: Mark Huang's Personal Documentation
+site_description: "Mark Huang's Personal Documentation"
 site_author: Mark Huang
 docs_dir: docs/
 
@@ -9,7 +9,7 @@ docs_dir: docs/
 # repo_url: 'https://github.com/MarkHershey/docs'
 
 # Copyright Declaration (shown at the end of the page)
-copyright: Mark Huang &copy; 2019-2021. All rights reserved.
+copyright: "Mark Huang &copy; 2019-2021. All Rights Reserved."
 
 # Footer Customization
 extra:
@@ -63,12 +63,16 @@ nav:
     - Projects:
       - Dotfiles: 'project/dotfiles.md'
     - Dev References:
-      - Docker: 'dev/docker.md'
-      - DNS: 'dev/dns.md'
-      - SSH: 'dev/ssh.md'
-      - VIM: 'dev/vim_ref.md'
-      - Linux CLI: 'dev/linux-commands.md'
-      - Linux Distros: 'dev/linux-distros.md'
+      - Dev Tools:
+        - Docker: 'dev/docker.md'
+        - VIM: 'dev/vim_ref.md'
+      - Networking:
+        - DNS: 'dev/dns.md'
+        - SSH: 'dev/ssh.md'
+        - TLS Certificate: 'dev/tls_certificate.md'
+      - Linux:
+        - Linux CLI: 'dev/linux-commands.md'
+        - Linux Distros: 'dev/linux-distros.md'
       - Computer Science Stuff:
         - CS Books: 'cs/cs_books.md'
         - CS Education at SUTD:
