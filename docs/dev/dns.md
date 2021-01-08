@@ -47,8 +47,8 @@ CNAME Records (Canonical Name Record) act as an alias by mapping a hostname to a
 
 A Canonical Name or CNAME record is a type of DNS record that maps an alias name to a true or canonical domain name. CNAME records are typically used to map a subdomain such as www or mail to the domain hosting that subdomain’s content.
 
-!!! example ""
-    For example, a CNAME record has Hostname = `www.example.com` and Value = `example.com`
+!!! example
+    A CNAME record has Hostname = `www.example.com` and Value = `example.com`
     
     - `www.example.com` becomes an alias for `example.com`.
     - This record maps the web address `www.example.com` to the actual web site for the domain `example.com`.
@@ -61,6 +61,11 @@ MX Records (Mail Exchanger Record) specify the mail servers responsible for acce
 
 NS Records (Name Server Record) specify the servers which are providing DNS services for your domain. You can use these to create subzones if you need to direct part of your traffic to another DNS service.
 
+!!! tips
+    NS Records could also be used to redirect/delegate DNS services. For example, you bought a domain from one of the domain name vendors (`godaddy.com`, `namecheap.com`, etc), usually the vendor provides free DNS service for your domain, but you prefer another DNS service provider (`DigitalOcean` for example), so that you can manage your DNS configurations at `DigitalOcean` side instead of your domain vendor side.
+
+    To do so, you can add a NS Record that redirect any DNS query comming to your domain vendor's DNS server to your desired DNS service provider.
+
 ### TXT Record
 
 TXT Records are used to associate a string of text with a hostname. These are primarily used for verification.
@@ -70,4 +75,5 @@ TXT Records are used to associate a string of text with a hostname. These are pr
 
 Futher Readings:
 
+- [Cloudflare: What Is DNS? | How DNS Works](https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/)
 - [Google Help: DNS basics](https://support.google.com/a/answer/48090)

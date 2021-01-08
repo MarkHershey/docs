@@ -60,6 +60,8 @@ extra_javascript:
 # Navigations
 nav:
     - Home: 'index.md'
+    - Projects:
+      - Dotfiles: 'project/dotfiles.md'
     - Dev References:
       - Docker: 'dev/docker.md'
       - DNS: 'dev/dns.md'
