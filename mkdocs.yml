@@ -11,23 +11,42 @@ docs_dir: docs/
 # Copyright Declaration (shown at the end of the page)
 copyright: Mark Huang &copy; 2019-2021. All rights reserved.
 
+# Footer Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/MarkHershey/docs
+
+
 # Extensions
 markdown_extensions:
-    - toc:
-        permalink: "#"
+    - attr_list
+    - admonition
+    - pymdownx.keys
+    - pymdownx.tabbed
+    - pymdownx.details
     - pymdownx.highlight
     - pymdownx.superfences
     - pymdownx.arithmatex:
         generic: true
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - toc:
+        permalink: "#"
+  
 
 # Theme Configuration
 theme:
     name: material
-    favicon: img/memory-solid.svg
+    favicon: img/memory-solid.svg     # for browser tab icon
     icon:
-      logo: fontawesome/solid/memory
+      logo: fontawesome/solid/memory  # for top-left site logo
+      repo: fontawesome/brands/github # for top-right repo link only
     features:
+      # - navigation.instant
       - navigation.tabs
+      - navigation.expand
     palette:
         scheme: slate
         primary: lime
