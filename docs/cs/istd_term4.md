@@ -1,18 +1,16 @@
-# CS Education at SUTD
-
-## ISTD Term 4
+# ISTD Term 4
 
 - 50.001 Introduction to Information Systems & Programming
 - 50.002 Computation Structures
 - 50.004 Introduction to Algorithms
 
-### 50.001 Introduction to Information Systems & Programming
+## 50.001 Introduction to Information Systems & Programming
 
 Instructors: 
 
 - [Ngai-Man (Man) Cheung](https://istd.sutd.edu.sg/people/faculty/ngai-man-man-cheung)
 
-### 50.002 Computation Structures
+## 50.002 Computation Structures
 
 Instructors:
 
@@ -32,7 +30,7 @@ Similar Courses:
     - [computationstructures.org](http://computationstructures.org/index.html)
 
 
-### 50.004 Introduction to Algorithms
+## 50.004 Introduction to Algorithms
 
 Instructors: 
 
@@ -59,11 +57,3 @@ Similar Courses:
         - [every year](https://courses.csail.mit.edu/6.006/)
 - MIT 6.046:
     - [Handouts Download](https://courses.csail.mit.edu/6.046/fall01/handouts/)
-
---- 
-
-## ISTD Term 5
-
-- 50.003 Elements of Software Construction
-- 50.005 Computer System Engineering
-- 50.034 Introduction to Probability and Statistics
