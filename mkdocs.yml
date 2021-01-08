@@ -1,5 +1,5 @@
 # Site Information
-site_name: WNDI
+site_name: "WNDI"
 site_description: Mark Huang's Personal Documentation
 site_author: Mark Huang
 docs_dir: docs/
@@ -62,6 +62,7 @@ nav:
     - Home: 'index.md'
     - Dev References:
       - Docker: 'dev/docker.md'
+      - DNS: 'dev/dns.md'
       - SSH: 'dev/ssh.md'
       - VIM: 'dev/vim_ref.md'
       - Linux CLI: 'dev/linux-commands.md'
