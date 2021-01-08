@@ -41,7 +41,7 @@ markdown_extensions:
         custom_checkbox: true
         clickable_checkbox: true
     - toc: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#table-of-contents
-        permalink: true
+        permalink: "⚓︎"
   
 
 # Theme Configuration
