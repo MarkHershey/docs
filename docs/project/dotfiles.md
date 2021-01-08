@@ -6,7 +6,7 @@
 `ZSH` + `Oh My Zsh` + `P10k` + `Tmux` + `Vim` 
 
 - Shell
-    - [Zsh]
+    - Zsh (Z Shell)
         - Plugin Manager
             - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
         - Built-in Plugins
