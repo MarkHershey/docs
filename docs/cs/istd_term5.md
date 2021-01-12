@@ -1,8 +1,11 @@
 # ISTD Term 5
 
-- 50.003 Elements of Software Construction
-- 50.005 Computer System Engineering
-- 50.034 Introduction to Probability and Statistics
+- ISTD Core:
+    - 50.003 Elements of Software Construction
+    - 50.005 Computer System Engineering
+    - 50.034 Introduction to Probability and Statistics
+- HASS Elective:
+    - 02.105DH Sages Through The Ages: Readings in Early Indian and Chinese Religion and Philosophy
 
 ## 50.003 Elements of Software Construction
 
@@ -20,3 +23,29 @@
         - Learning secure software coding standards.
         - Learning key concepts in developing concurrent programs.
         - Learning key concepts in reasoning and testing concurrent programs.
+
+Instructors:
+
+- [Sudipta Chattopadhyay](https://istd.sutd.edu.sg/people/faculty/sudipta-chattopadhyay)
+
+## 50.005 Computer System Engineering
+
+Instructors:
+
+- [David Yau](https://istd.sutd.edu.sg/people/faculty/david-yau)
+- [Natalie Agus](https://istd.sutd.edu.sg/people/faculty/natalie-agus)
+
+
+## 50.034 Introduction to Probability and Statistics
+
+Instructors:
+
+- [Soh De Wen](https://istd.sutd.edu.sg/people/faculty/soh-de-wen)
+- [Ernest Chong](https://istd.sutd.edu.sg/people/faculty/ernest-chong)
+
+
+## 02.105DH Sages Through The Ages: Readings in Early Indian and Chinese Religion and Philosophy
+
+Instructors:
+
+- [Alastair Gornall](https://hass.sutd.edu.sg/faculty/alastair-gornall/)

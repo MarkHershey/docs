@@ -18,7 +18,6 @@
             - [command-not-found](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found)
         - Custom Plugins
             - [zsh-completions](https://github.com/zsh-users/zsh-completions)
-            - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
             - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
         - Theme
             - [powerlevel10k](https://github.com/romkatv/powerlevel10k)

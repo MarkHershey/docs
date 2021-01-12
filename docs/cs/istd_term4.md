@@ -1,8 +1,11 @@
 # ISTD Term 4
 
-- 50.001 Introduction to Information Systems & Programming
-- 50.002 Computation Structures
-- 50.004 Introduction to Algorithms
+- ISTD Core:
+    - 50.001 Introduction to Information Systems & Programming
+    - 50.002 Computation Structures
+    - 50.004 Introduction to Algorithms
+- HASS Elective:
+    - 02.137DH Introduction to Digital Humanities
 
 ## 50.001 Introduction to Information Systems & Programming
 
