@@ -1,4 +1,4 @@
-# Frequently Used Linux Commands
+# Linux Commands
 
 ### System
 
@@ -12,13 +12,130 @@
 - `iwconfig`
 - `ping <domain name | ip address>`
 - `top` show processes; use `q` to quit
--  `uname -a` check machine info
-- `blkid` check hard drive
-- `df` disk info
+- `uname -a` check machine info
 - `lsusb` list usb
 - `lspci` list pci
 
+### User & Permission
 
+#### List all user
+
+```
+less /etc/passwd
+```
+
+```
+users
+```
+
+#### List all groups
+
+```
+less /etc/group
+```
+
+```
+groups
+```
+
+#### List all groups that a specific user belongs to
+
+```
+groups USER
+```
+
+```
+id USER
+```
+
+#### List all users in a specific group
+
+```
+getent group GROUP
+```
+
+#### Add user to a group
+
+```
+usermod -aG GROUP USER
+```
+
+- New group will be one of the user's secondary groups
+
+#### Change user's primary group
+
+```
+usermod -g GROUP USER
+```
+
+#### Change current user's password
+
+```
+passwd
+```
+
+#### Change other user's password with sudo
+
+```
+sudo passwd USER
+```
+
+#### Change owner for all files inside a folder
+
+```
+sudo chown USER[:GROUP] FILE(s)
+```
+
+#### Change user permission of a file
+
+!!! info "*NIX System Permissions"
+    Example:
+    ```
+    drwx------   5 markhuang  staff   160B Jan 13 11:13 .ssh
+    lrwxr-xr-x   1 markhuang  staff    40B Jan  8 17:41 .tmux.conf -> ./dotfiles/tmux/tmux.conf
+    -rw-------   1 markhuang  staff   797B Jan  9 16:39 .viminfo
+    ```
+    
+    - First char: `d`/`l`/`-` stands for `dir`/`link`/`file`
+    - following 3 chars: `r`/`-` + `w`/`-` + `x`/`-` represent `Read`,`Write`,`Execute` permission for **owner user**.
+    - following 3 chars: `r`/`-` + `w`/`-` + `x`/`-` represent `Read`,`Write`,`Execute` permission for **owner group**.
+    - following 3 chars: `r`/`-` + `w`/`-` + `x`/`-` represent `Read`,`Write`,`Execute` permission for **other user**.
+
+
+!!! info ""
+    To change directory permissions for everyone, use `u` for users, `g` for group, `o` for others, and `ugo` or `a` for all.
+
+```
+chmod NEW_PERMISSIONS FILE
+```
+
+??? Examples
+    ```bash
+    chmod u+x example.sh
+    chmod ug+r example.sh
+    chmod ug-w example.sh
+    chmod a+rwx example.sh
+    ```
+
+### Disk
+
+#### Check disk utilization 
+
+```
+df -h
+```
+
+- `-h` for "Human-readable" output
+
+
+#### Check file/folder size
+
+```
+du -sh {dir}
+```
+
+- `-s` for "specified" file/dir only
+- `-h` for "Human-readable" output
 
 ### Navigate Around File System
 
@@ -71,18 +188,7 @@ scp example.json root@178.128.22.33:/home/root/example
 ```
 
 
-change owner for all files inside a folder
 
-```
-sudo chown -R username:username [folder]
-```
-
-change user permission of a file
-
-```
-chmod [updated permissions] [filename]
-chmod u+e example.sh
-```
 
 
 

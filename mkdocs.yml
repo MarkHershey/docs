@@ -79,7 +79,7 @@ nav:
         - SSH: 'dev/ssh.md'
         - TLS Certificate: 'dev/tls_certificate.md'
       - Linux:
-        - Linux CLI: 'dev/linux-commands.md'
+        - Linux Commands: 'dev/linux-commands.md'
         - Linux Distros: 'dev/linux-distros.md'
       - Computer Science Stuff:
         - CS Books: 'cs/cs_books.md'
