@@ -16,6 +16,13 @@
     docker system prune -a
     ```
 
+### Resolve potential IP Conflicts caused by Docker
+
+!!! info ""
+    Reference: [How To Change The Default Docker Subnet](https://support.zenoss.com/hc/en-us/articles/203582809-How-to-Change-the-Default-Docker-Subnet)
+
+Docker uses the default 172.17.0.0/16 subnet for container networking. If this subnet is not available for docker in your environment (for example because your network already uses this subnet), you must configure Docker to use a different subnet.
+
 ## Working with Docker Images 
 
 ### List local images
