@@ -81,10 +81,11 @@ nav:
       - Linux:
         - Linux Commands: 'dev/linux-commands.md'
         - Linux Distros: 'dev/linux-distros.md'
-      - Computer Science Stuff:
-        - CS Books: 'cs/cs_books.md'
-        - CS Education at SUTD:
-          - ISTD TERM 4: 'cs/istd_term4.md'
-          - ISTD TERM 5: 'cs/istd_term5.md'
+    - CS Resources:
+      - CS Books: 'cs/cs_books.md'
+      - CS Online Courses: 'cs/cs_courses.md'
+      - CS Education at SUTD:
+        - ISTD TERM 4: 'cs/istd_term4.md'
+        - ISTD TERM 5: 'cs/istd_term5.md'
     - SUTD:
       - SUTD Bookmarks: 'SUTD/sutd_bookmarks.md'
