@@ -22,6 +22,9 @@
 
 - Stanford's [CS109: Probability for Computer Scientists](https://web.stanford.edu/class/cs109/)
 
+## Machine Learning
+
+- Stanford's [CS229: Machine Learning](https://see.stanford.edu/Course/CS229) (also on [Coursera](https://www.coursera.org/learn/machine-learning))
 
 ## Deep Learning
 
