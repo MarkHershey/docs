@@ -11,8 +11,12 @@
 
 ## Best CS Books
 
+- The C Programming Language (2nd Edition) (**K&R**)
+    - a.k.a "K&R" (authors: Brian Kernighan and Dennis Ritchie)
+    - [Google Books](https://books.google.com.sg/books?id=FGkPBQAAQBAJ&dq=The+C+Programming+Language&hl=en&sa=X&ved=2ahUKEwiNzOm_z6DuAhWT4zgGHcoICYIQ6AEwAXoECAIQAg)
+    - [PDF](http://mef-lab.com/osnove-2016/C-Programming-Ebook.pdf)
 - Introduction to Algorithms (**CLRS**)
-    - "CLRS" (authors: Cormen, Leiserson, Rivest, Stein)
+    - a.k.a. "CLRS" (authors: Cormen, Leiserson, Rivest, Stein)
     - [Google Books](https://books.google.com.sg/books/about/Introduction_To_Algorithms.html?id=NLngYyWFl_YC&redir_esc=y)
     - [MIT press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
     - CLRS Solutions
@@ -20,6 +24,7 @@
         - [gzc / CLRS](https://github.com/gzc/CLRS)
         - [walkccc / CLRS](https://walkccc.github.io/CLRS/)
         - [atekihcan / CLRS](https://atekihcan.github.io/CLRS/)
+    - CLRS might be hard to read, an alternative approach to learn basic algorithms is Stanford's [CS 97SI: Introduction to Programming Contests](https://web.stanford.edu/class/cs97si/)
 - Computer Systems: A Programmer's Perspective (**CSAPP**)
     - [Google Books](https://books.google.com.sg/books/about/Computer_Systems.html?id=YmfjtAEACAAJ&source=kp_book_description&redir_esc=y)
 - Designing Data-Intensive Applications (**DDIA**)
