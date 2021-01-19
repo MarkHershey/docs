@@ -74,6 +74,7 @@ nav:
       - Dev Tools:
         - Docker: 'dev/docker.md'
         - VIM: 'dev/vim_ref.md'
+        - Tmux: 'dev/tmux_ref.md'
       - Networking:
         - DNS: 'dev/dns.md'
         - SSH: 'dev/ssh.md'
