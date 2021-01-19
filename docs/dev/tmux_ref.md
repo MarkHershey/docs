@@ -32,3 +32,6 @@ All commands in tmux are triggered by a **prefix key** followed by a **command k
 
 ??? info "References"
     - [A Quick and Easy Guide to tmux](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)
+    - [A tmux Crash Course](https://thoughtbot.com/blog/a-tmux-crash-course)
+    - [Seamlessly Navigate Vim and tmux Splits](https://thoughtbot.com/blog/seamlessly-navigate-vim-and-tmux-splits)
+    - [tmux Copy & Paste on OS X: A Better Future](https://thoughtbot.com/blog/tmux-copy-paste-on-os-x-a-better-future)
