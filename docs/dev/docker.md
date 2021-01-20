@@ -95,15 +95,15 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
 - Create an run a container in foreground
   ```
-  $ docker container run -it -p 80:80 --name nginx-server nginx
+  docker container run -it -p 80:80 --name nginx-server nginx
   ```
 - Create an run a container in background
   ```
-  $ docker container run -d -p 80:80 --name nginx-server nginx
+  docker container run -d -p 80:80 --name nginx-server nginx
   ```
-- Start an ubuntu container interactively and destroy on exited
+- **Run an fresh ubuntu container interactively and destroy on exit**
   ```
-  docker container run --rm -it ubuntu
+  docker run -it --rm ubuntu bash
   ```
 
 > WHAT `RUN` DID
