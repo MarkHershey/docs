@@ -79,6 +79,7 @@ nav:
         - DNS: 'dev/dns.md'
         - SSH: 'dev/ssh.md'
         - TLS Certificate: 'dev/tls_certificate.md'
+        - NPS: 'dev/nps.md'
       - Linux:
         - Linux Commands: 'dev/linux-commands.md'
         - Linux Distros: 'dev/linux-distros.md'
