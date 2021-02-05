@@ -84,6 +84,8 @@ nav:
         - Linux Commands: 'dev/linux-commands.md'
         - Linux Distros: 'dev/linux-distros.md'
         - Mount G-Drive headlessly : 'dev/linux-mount-gdrive.md'
+      - Languages:
+        - LaTex: 'dev/latex_ref.md'
     - CS Resources:
       - CS Books: 'cs/cs_books.md'
       - CS Online Courses: 'cs/cs_courses.md'
