@@ -1,5 +1,17 @@
 # Linux Commands
 
+## Basic
+
+-   `ls -la`
+-   `cd`
+-   `rm`
+-   `cp`
+-   `mv`
+-   `nano`
+-   `touch`
+-   `mkdir`
+-   `rmdir`
+
 ### System
 
 - `sudo apt update` check for updates
@@ -18,75 +30,60 @@
 
 ### User & Permission
 
-#### List all user
+??? info "List all user"
+    ```bash
+    less /etc/passwd
+    ```
+    or
+    ```bash
+    users
+    ```
 
-```
-less /etc/passwd
-```
+??? info "List all groups"
+    ```bash
+    less /etc/group
+    ```
+    or
+    ```bash
+    groups
+    ```
 
-```
-users
-```
+??? info "List all groups that a specific user belongs to"
+    ```bash
+    groups USER
+    ```
+    or
+    ```bash
+    id USER
+    ```
 
-#### List all groups
+??? info "List all users in a specific group"
+    ```bash
+    getent group GROUP
+    ```
 
-```
-less /etc/group
-```
+??? info "Add user to a group"
+    ```bash
+    usermod -aG GROUP USER
+    ```
+    - New group will be one of the user's secondary groups
 
-```
-groups
-```
+??? info "Change user's primary group"
+    ```bash
+    usermod -g GROUP USER
+    ```
 
-#### List all groups that a specific user belongs to
+??? info "Change current user's password"
+    ```bash
+    passwd
+    ```
 
-```
-groups USER
-```
+??? info "Change other user's password with sudo"
+    ```bash
+    sudo passwd USER
+    ```
 
-```
-id USER
-```
-
-#### List all users in a specific group
-
-```
-getent group GROUP
-```
-
-#### Add user to a group
-
-```
-usermod -aG GROUP USER
-```
-
-- New group will be one of the user's secondary groups
-
-#### Change user's primary group
-
-```
-usermod -g GROUP USER
-```
-
-#### Change current user's password
-
-```
-passwd
-```
-
-#### Change other user's password with sudo
-
-```
-sudo passwd USER
-```
-
-#### Change owner for all files inside a folder
-
-```
-sudo chown USER[:GROUP] FILE(s)
-```
-
-#### Change user permission of a file
+## File Permissions
 
 !!! info "*NIX System Permissions"
     Example:
@@ -101,13 +98,18 @@ sudo chown USER[:GROUP] FILE(s)
     - following 3 chars: `r`/`-` + `w`/`-` + `x`/`-` represent `Read`,`Write`,`Execute` permission for **owner group**.
     - following 3 chars: `r`/`-` + `w`/`-` + `x`/`-` represent `Read`,`Write`,`Execute` permission for **other user**.
 
-
 !!! info ""
     To change directory permissions for everyone, use `u` for users, `g` for group, `o` for others, and `ugo` or `a` for all.
 
-```
-chmod NEW_PERMISSIONS FILE
-```
+??? info "Change owner for all files inside a folder"
+    ```bash
+    sudo chown USER[:GROUP] FILE(s)
+    ```
+
+??? info "Change user permission of a file"
+    ```bash
+    chmod NEW_PERMISSIONS FILE
+    ```
 
 ??? Examples
     ```bash
