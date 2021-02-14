@@ -102,7 +102,7 @@
     - Password: your **Network ID** password 
 
 
-[SUTD - Download (New) (via sharepoint)](https://sutdapac-my.sharepoint.com/personal/sysop_sutd_edu_sg/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsysop%5Fsutd%5Fedu%5Fsg%2FDocuments%2FStudents%20Software&originalPath=aHR0cHM6Ly9zdXRkYXBhYy1teS5zaGFyZXBvaW50LmNvbS86ZjovZy9wZXJzb25hbC9zeXNvcF9zdXRkX2VkdV9zZy9FaVJ4Mk5Xb0l1RkpvT0xfOXMxQ2ZSQUIzckZOZmw1LTJWU2xfQTRYd1VhN2xnP3J0aW1lPUN0UldycWczMkVn)
+[SUTD - Download (New) (via sharepoint)](https://sutdapac-my.sharepoint.com/:f:/g/personal/sysop_sutd_edu_sg/EiRx2NWoIuFJoOL_9s1CfRAB3rFNfl5-2VSl_A4XwUa7lg)
 
 !!! info ""
     - Require SUTD office 365 logged in
