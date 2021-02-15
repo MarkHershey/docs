@@ -9,11 +9,15 @@
 
 ## 50.001 Introduction to Information Systems & Programming
 
+Language: `Java`
+
 Instructors: 
 
 - [Ngai-Man (Man) Cheung](https://istd.sutd.edu.sg/people/faculty/ngai-man-man-cheung)
 
 ## 50.002 Computation Structures
+
+Language: `C`, `Assembly`, `Verilog`
 
 Instructors:
 

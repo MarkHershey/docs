@@ -9,11 +9,15 @@
 
 ## 50.003 Elements of Software Construction
 
+Language: `Java`
+
 Instructors:
 
 - [Sudipta Chattopadhyay](https://istd.sutd.edu.sg/people/faculty/sudipta-chattopadhyay)
 
 ## 50.005 Computer System Engineering
+
+Language: `C` and `Java`
 
 Instructors:
 
