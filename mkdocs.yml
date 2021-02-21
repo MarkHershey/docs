@@ -86,11 +86,12 @@ nav:
         - Mount G-Drive headlessly : 'dev/linux-mount-gdrive.md'
       - Languages:
         - LaTex: 'dev/latex_ref.md'
-    - CS Resources:
+    - Resources:
       - CS Books: 'cs/cs_books.md'
       - CS Online Courses: 'cs/cs_courses.md'
       - CS Education at SUTD:
         - ISTD TERM 4: 'cs/istd_term4.md'
         - ISTD TERM 5: 'cs/istd_term5.md'
+      - Tools: 'recomm/tools.md'
     - SUTD:
       - SUTD Bookmarks: 'sutd/bookmarks.md'
