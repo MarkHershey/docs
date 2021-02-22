@@ -4,8 +4,7 @@
 
     **Hey there** :fontawesome-regular-laugh-wink:
 
-    This is a personal documentation space. 
-    Feel free to look around.
+    This is just an insignificant documentation space for personal reference.
 
     ---
 
