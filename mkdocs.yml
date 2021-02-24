@@ -86,6 +86,8 @@ nav:
         - Mount G-Drive headlessly : 'dev/linux-mount-gdrive.md'
       - Languages:
         - LaTex: 'dev/latex_ref.md'
+      - NVIDIA:
+        - Install Driver on Ubuntu: 'dev/nvidia_driver.md'
     - Resources:
       - CS Books: 'cs/cs_books.md'
       - CS Online Courses: 'cs/cs_courses.md'
