@@ -1,0 +1,1369 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mark Huang's Personal Documentation">
+      
+      
+      
+        <meta name="author" content="Mark Huang">
+      
+      
+      <link rel="shortcut icon" href="../../img/memory-solid.svg">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.0">
+    
+    
+      
+        <title>SSH - WNDI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a3f8f96a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#cbdc38">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ssh-authentication" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="WNDI" class="md-header__button md-logo" aria-label="WNDI">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WNDI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SSH
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../project/dotfiles/" class="md-tabs__link">
+        Projects
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../docker/" class="md-tabs__link md-tabs__link--active">
+        Dev References
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cs/cs_books/" class="md-tabs__link">
+        Resources
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sutd/bookmarks/" class="md-tabs__link">
+        SUTD
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="WNDI" class="md-nav__button md-logo" aria-label="WNDI">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"/></svg>
+
+    </a>
+    WNDI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" data-md-state="indeterminate" type="checkbox" id="nav-2" checked>
+      
+      <label class="md-nav__link" for="nav-2">
+        Projects
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Projects" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/dotfiles/" class="md-nav__link">
+        Dotfiles
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      
+      <label class="md-nav__link" for="nav-3">
+        Dev References
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Dev References" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Dev References
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" data-md-state="indeterminate" type="checkbox" id="nav-3-1" checked>
+      
+      <label class="md-nav__link" for="nav-3-1">
+        Dev Tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Dev Tools" data-md-level="2">
+        <label class="md-nav__title" for="nav-3-1">
+          <span class="md-nav__icon md-icon"></span>
+          Dev Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vim_ref/" class="md-nav__link">
+        VIM
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tmux_ref/" class="md-nav__link">
+        Tmux
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+      
+      <label class="md-nav__link" for="nav-3-2">
+        Networking
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Networking" data-md-level="2">
+        <label class="md-nav__title" for="nav-3-2">
+          <span class="md-nav__icon md-icon"></span>
+          Networking
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dns/" class="md-nav__link">
+        DNS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SSH
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SSH
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#three-methods-of-authentication" class="md-nav__link">
+    Three methods of Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-public-key-authentication" class="md-nav__link">
+    Setting up Public Key Authentication
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up Public Key Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-generate-an-ssh-key" class="md-nav__link">
+    Step 1: Generate an SSH Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-add-the-public-key-to-a-server" class="md-nav__link">
+    Step 2: Add the public key to a server
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Add the public key to a server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-manual" class="md-nav__link">
+    Method 1: Manual
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-using-ssh-copy-id" class="md-nav__link">
+    Method 2: Using ssh-copy-id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-turn-off-password-authentication" class="md-nav__link">
+    Step 3: Turn Off Password Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-test-your-connection" class="md-nav__link">
+    Step 4: Test your connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-note-for-server-setup" class="md-nav__link">
+    Additional Note for Server Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Note for Server Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-new-user" class="md-nav__link">
+    create new user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-ssh-key-under-new-user" class="md-nav__link">
+    set up SSH key under new user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-password-authentication-and-root-login" class="md-nav__link">
+    disable password authentication and root login
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-owner-of-new-users-home-folder-from-root-to-new-user" class="md-nav__link">
+    change owner of new user's home folder from root to new user
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-note-for-github-setup" class="md-nav__link">
+    Additional Note for GitHub Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-ssh-agent" class="md-nav__link">
+    Start SSH Agent
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tls_certificate/" class="md-nav__link">
+        TLS Certificate
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nps/" class="md-nav__link">
+        NPS
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" data-md-state="indeterminate" type="checkbox" id="nav-3-3" checked>
+      
+      <label class="md-nav__link" for="nav-3-3">
+        Linux
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="nav-3-3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-commands/" class="md-nav__link">
+        Linux Commands
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-distros/" class="md-nav__link">
+        Linux Distros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-mount-gdrive/" class="md-nav__link">
+        Mount G-Drive headlessly
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" data-md-state="indeterminate" type="checkbox" id="nav-3-4" checked>
+      
+      <label class="md-nav__link" for="nav-3-4">
+        Languages
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Languages" data-md-level="2">
+        <label class="md-nav__title" for="nav-3-4">
+          <span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../latex_ref/" class="md-nav__link">
+        LaTex
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" data-md-state="indeterminate" type="checkbox" id="nav-3-5" checked>
+      
+      <label class="md-nav__link" for="nav-3-5">
+        NVIDIA
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="NVIDIA" data-md-level="2">
+        <label class="md-nav__title" for="nav-3-5">
+          <span class="md-nav__icon md-icon"></span>
+          NVIDIA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nvidia_driver/" class="md-nav__link">
+        Install Driver on Ubuntu
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" data-md-state="indeterminate" type="checkbox" id="nav-4" checked>
+      
+      <label class="md-nav__link" for="nav-4">
+        Resources
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/cs_books/" class="md-nav__link">
+        CS Books
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/cs_courses/" class="md-nav__link">
+        CS Online Courses
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" data-md-state="indeterminate" type="checkbox" id="nav-4-3" checked>
+      
+      <label class="md-nav__link" for="nav-4-3">
+        CS Education at SUTD
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CS Education at SUTD" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-3">
+          <span class="md-nav__icon md-icon"></span>
+          CS Education at SUTD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/istd_term4/" class="md-nav__link">
+        ISTD TERM 4
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/istd_term5/" class="md-nav__link">
+        ISTD TERM 5
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recomm/tools/" class="md-nav__link">
+        Tools
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" data-md-state="indeterminate" type="checkbox" id="nav-5" checked>
+      
+      <label class="md-nav__link" for="nav-5">
+        SUTD
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="SUTD" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          SUTD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sutd/bookmarks/" class="md-nav__link">
+        SUTD Bookmarks
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#three-methods-of-authentication" class="md-nav__link">
+    Three methods of Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-public-key-authentication" class="md-nav__link">
+    Setting up Public Key Authentication
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up Public Key Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-generate-an-ssh-key" class="md-nav__link">
+    Step 1: Generate an SSH Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-add-the-public-key-to-a-server" class="md-nav__link">
+    Step 2: Add the public key to a server
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Add the public key to a server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-manual" class="md-nav__link">
+    Method 1: Manual
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-using-ssh-copy-id" class="md-nav__link">
+    Method 2: Using ssh-copy-id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-turn-off-password-authentication" class="md-nav__link">
+    Step 3: Turn Off Password Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-test-your-connection" class="md-nav__link">
+    Step 4: Test your connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-note-for-server-setup" class="md-nav__link">
+    Additional Note for Server Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Note for Server Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-new-user" class="md-nav__link">
+    create new user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-ssh-key-under-new-user" class="md-nav__link">
+    set up SSH key under new user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-password-authentication-and-root-login" class="md-nav__link">
+    disable password authentication and root login
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-owner-of-new-users-home-folder-from-root-to-new-user" class="md-nav__link">
+    change owner of new user's home folder from root to new user
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-note-for-github-setup" class="md-nav__link">
+    Additional Note for GitHub Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-ssh-agent" class="md-nav__link">
+    Start SSH Agent
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="ssh-authentication">SSH Authentication<a class="headerlink" href="#ssh-authentication" title="Permanent link">#</a></h1>
+<h2 id="three-methods-of-authentication">Three methods of Authentication<a class="headerlink" href="#three-methods-of-authentication" title="Permanent link">#</a></h2>
+<p><code>ssh username@hostname</code></p>
+<ol>
+<li>Password Authentication (Secret-key/ Symmetric Cryptography)</li>
+<li>Public Key Authentication (Asymmetric Cryptography)</li>
+<li>Host Based Authentication (Whitelisting)</li>
+</ol>
+<h2 id="setting-up-public-key-authentication">Setting up Public Key Authentication<a class="headerlink" href="#setting-up-public-key-authentication" title="Permanent link">#</a></h2>
+<p>The motivation for using public key authentication over simple passwords is security. Public key authentication provides cryptographic strength that even extremely long passwords can not offer. With SSH, public key authentication improves security considerably as it frees the users from remembering complicated passwords (or worse yet, writing them down).</p>
+<p>Each SSH key pair includes two keys:</p>
+<ul>
+<li>
+<p>A <strong>public key</strong> that is copied to the SSH server(s). Anyone with a copy of the public key can encrypt data which can then only be read by the person who holds the corresponding private key. Once an SSH server receives a public key from a user and considers the key trustworthy, the server marks the key as authorized in its authorized_keys file. Such keys are called authorized keys.</p>
+</li>
+<li>
+<p>A <strong>private key</strong> that remains (only) with the user. The possession of this key is proof of the user's identity. Only a user in possession of a private key that corresponds to the public key at the server will be able to authenticate successfully. The private keys need to be stored and handled carefully, and no copies of the private key should be distributed. The private keys used for user authentication are called identity keys.</p>
+</li>
+</ul>
+<p>Reference: <a href="https://www.ssh.com/ssh/public-key-authentication">www.ssh.com/ssh/public-key-authentication</a></p>
+<h3 id="step-1-generate-an-ssh-key">Step 1: Generate an SSH Key<a class="headerlink" href="#step-1-generate-an-ssh-key" title="Permanent link">#</a></h3>
+<p>Run <code>ssh-keygen -t rsa</code> in terminal and follow its instructions,</p>
+<p>or <code>ssh-keygen -t rsa -b 4096</code> for extra enhanced security.</p>
+<blockquote>
+<ul>
+<li><code>-t</code> “Type” This option specifies the type of key to be created. Commonly used values are:</li>
+<li><code>rsa</code> for RSA keys</li>
+<li><code>dsa</code> for DSA keys</li>
+<li>
+<p><code>ecdsa</code> for elliptic curve DSA keys</p>
+</li>
+<li>
+<p><code>-b</code> “Bits” This option specifies the number of bits in the key. The regulations that govern the use case for SSH may require a specific key length to be used. In general, 2048 bits is considered to be sufficient for RSA keys.</p>
+</li>
+</ul>
+<p>Reference: <a href="https://www.ssh.com/ssh/keygen/">www.ssh.com/ssh/keygen/</a></p>
+</blockquote>
+<p>Key pair generated will be stored at the following path by default:</p>
+<ul>
+<li><code>~/.ssh/id_rsa</code> (Private Key)</li>
+<li><code>~/.ssh/id_rsa.pub</code> (Public Key)</li>
+</ul>
+<h3 id="step-2-add-the-public-key-to-a-server">Step 2: Add the public key to a server<a class="headerlink" href="#step-2-add-the-public-key-to-a-server" title="Permanent link">#</a></h3>
+<p>Public key should be copied into your target server's <code>~/.ssh/authorized_keys</code> file. Use either one of the following methods to do that.</p>
+<h5 id="method-1-manual">Method 1: Manual<a class="headerlink" href="#method-1-manual" title="Permanent link">#</a></h5>
+<ol>
+<li>SSH into your server using password authentication.</li>
+<li>Create the <code>.ssh/</code> folder under home directory if it doesn't exist.</li>
+<li>Create the <code>authorized_keys</code> file under <code>.ssh/</code> folder if it doesn't exist, no file extension needed.</li>
+<li>
+<p>Copy your public key from <code>~/.ssh/id_rsa.pub</code> at your local machine to the <code>~/.ssh/authorized_keys</code> file on your server.</p>
+</li>
+<li>
+<p>You might need to change the permission of the folder.
+<div class="highlight"><pre><span></span><code>chmod 700 ~/.ssh/
+chmod 600 ~/.ssh/*
+</code></pre></div></p>
+</li>
+</ol>
+<p>or</p>
+<div class="highlight"><pre><span></span><code>cat ~/.ssh/id_rsa.pub | ssh user@host &quot;mkdir -p ~/.ssh &amp;&amp; chmod 700 ~/.ssh &amp;&amp; cat &gt;&gt;  ~/.ssh/authorized_keys&quot;
+</code></pre></div>
+<h5 id="method-2-using-ssh-copy-id">Method 2: Using <code>ssh-copy-id</code><a class="headerlink" href="#method-2-using-ssh-copy-id" title="Permanent link">#</a></h5>
+<p><em>Linux user can use this command by default, macOS user need to install it first by <code>brew install ssh-copy-id</code>.</em></p>
+<div class="highlight"><pre><span></span><code>ssh-copy-id user@host
+</code></pre></div>
+<p>or use <code>-i</code> to explicitly specify which key to be copied over:</p>
+<p><div class="highlight"><pre><span></span><code>ssh-copy-id -i ~/.ssh/id_rsa.pub user@host
+</code></pre></div>
+- <code>-i</code> Specifies the identity file that is to be copied (default is <code>~/.ssh/id_rsa</code>). If this option is not provided, this adds all keys listed by <code>ssh-add -L</code>. Note: it can be multiple keys and adding extra authorized keys can easily happen accidentally!</p>
+<blockquote>
+<p><strong>How <code>ssh-copy-id</code> works</strong></p>
+<p>ssh-copy-id uses the SSH protocol to connect to the target host and upload the SSH user key. The command edits the authorized_keys file on the server. It creates the .ssh directory if it doesn't exist. It creates the authorized keys file if it doesn't exist. Effectively, ssh key copied to server.</p>
+<p>It also checks if the key already exists on the server. Unless the -f option is given, each key is only added to the authorized keys file once.</p>
+<p>It further ensures that the key files have appropriate permissions. Generally, the user's home directory or any file or directory containing keys files should not be writable by anyone else. Otherwise someone else could add new authorized keys for the user and gain access. Private key files should not be readable by anyone else.</p>
+<p>Reference: <a href="https://www.ssh.com/ssh/copy-id">www.ssh.com/ssh/copy-id</a></p>
+</blockquote>
+<h3 id="step-3-turn-off-password-authentication">Step 3: Turn Off Password Authentication<a class="headerlink" href="#step-3-turn-off-password-authentication" title="Permanent link">#</a></h3>
+<p>Make a copy of the config file just in case
+<div class="highlight"><pre><span></span><code>sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
+</code></pre></div></p>
+<p>Edit the config file:
+<div class="highlight"><pre><span></span><code>sudo nano /etc/ssh/sshd_config
+</code></pre></div></p>
+<p>Ensure these two lines exist and it is uncommented:
+<div class="highlight"><pre><span></span><code>PubkeyAuthentication yes
+PasswordAuthentication no
+</code></pre></div></p>
+<p>Restart the SSH service
+<div class="highlight"><pre><span></span><code>sudo service ssh restart
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code>sudo systemctl reload sshd.service
+</code></pre></div></p>
+<h3 id="step-4-test-your-connection">Step 4: Test your connection<a class="headerlink" href="#step-4-test-your-connection" title="Permanent link">#</a></h3>
+<p><div class="highlight"><pre><span></span><code>ssh user@host
+</code></pre></div>
+or specify your key explicitly:
+<div class="highlight"><pre><span></span><code>ssh -i ~/.ssh/mykey user@host
+</code></pre></div>
+- OpenSSH only allows a maximum of five keys to be tried automatically. If you have more keys, you must specify which key to use using the <code>-i</code> option to <code>ssh</code>.</p>
+<h3 id="additional-note-for-server-setup">Additional Note for Server Setup<a class="headerlink" href="#additional-note-for-server-setup" title="Permanent link">#</a></h3>
+<h4 id="create-new-user">create new user<a class="headerlink" href="#create-new-user" title="Permanent link">#</a></h4>
+<ul>
+<li><code>adduser &lt;username&gt;</code> add linux user</li>
+<li><code>id &lt;username&gt;</code> check user permissions</li>
+<li><code>usermod -aG sudo &lt;username&gt;</code> grant root permission to user</li>
+<li><code>id &lt;username&gt;</code> check user permissions</li>
+</ul>
+<h4 id="set-up-ssh-key-under-new-user">set up SSH key under new user<a class="headerlink" href="#set-up-ssh-key-under-new-user" title="Permanent link">#</a></h4>
+<ul>
+<li><code>cd /home/&lt;username&gt;</code></li>
+<li>refer from Step 2</li>
+</ul>
+<h4 id="disable-password-authentication-and-root-login">disable password authentication and root login<a class="headerlink" href="#disable-password-authentication-and-root-login" title="Permanent link">#</a></h4>
+<ul>
+<li><code>PasswordAuthentication no</code></li>
+<li><code>PermitRootLogin no</code></li>
+<li><code>sudo systemctl reload sshd</code></li>
+</ul>
+<h4 id="change-owner-of-new-users-home-folder-from-root-to-new-user">change owner of new user's home folder from root to new user<a class="headerlink" href="#change-owner-of-new-users-home-folder-from-root-to-new-user" title="Permanent link">#</a></h4>
+<ul>
+<li><code>sudo chown -R &lt;username&gt;:&lt;username&gt; /home/&lt;username&gt;</code></li>
+<li><code>chmod 700 /home/&lt;username&gt;/.ssh</code></li>
+</ul>
+<h3 id="additional-note-for-github-setup">Additional Note for GitHub Setup<a class="headerlink" href="#additional-note-for-github-setup" title="Permanent link">#</a></h3>
+<ul>
+<li>Step 1: Key Generation</li>
+<li>Step 2: Copy and paste the public key to your <a href="https://github.com/settings/keys">Github &gt; Settings &gt; SSH and GPG keys</a></li>
+<li>Step 3: <code>ssh-add ~/.ssh/&lt;your-key-name&gt;</code></li>
+</ul>
+<blockquote>
+<ul>
+<li>
+<p><code>ssh-add</code> adds private key identities (from your <code>~/.ssh</code> directory) to the authentication agent (<code>ssh-agent</code>), so that the ssh agent can take care of the authentication for you.</p>
+</li>
+<li>
+<p>In Unix, <code>ssh-agent</code> is a background program that handles passwords for SSH private keys. The <code>ssh-add</code> command prompts the user for a private key password and adds it to the list maintained by <code>ssh-agent</code>. Once you add a password to <code>ssh-agent</code>, you will not be prompted for it when using <code>SSH</code> or <code>scp</code> to connect to hosts with your public key.</p>
+</li>
+</ul>
+<p>Reference:
+  - <a href="https://superuser.com/questions/360686/what-exactly-does-ssh-add-do">What exactly does ssh-add do?</a>
+  -<a href="https://kb.iu.edu/d/aeww">About ssh-agent and ssh-add in Unix</a>
+  -<a href="http://blog.joncairns.com/2013/12/understanding-ssh-agent-and-ssh-add/">Understanding ssh-agent and ssh-add</a></p>
+</blockquote>
+<h3 id="start-ssh-agent">Start SSH Agent<a class="headerlink" href="#start-ssh-agent" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>eval &quot;$(ssh-agent -s)&quot;
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../dns/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              DNS
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../tls_certificate/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              TLS Certificate
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Mark Huang &copy; 2019-2021. All Rights Reserved.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/MarkHershey/docs" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.217ffd95.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.926459b3.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1469 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mark Huang's Personal Documentation">
+      
+      
+      
+        <meta name="author" content="Mark Huang">
+      
+      
+      <link rel="shortcut icon" href="../../img/memory-solid.svg">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.0">
+    
+    
+      
+        <title>Get Started with Git & GitHub - WNDI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a3f8f96a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#cbdc38">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#get-started-with-git-github" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="WNDI" class="md-header__button md-logo" aria-label="WNDI">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WNDI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Get Started with Git & GitHub
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../project/dotfiles/" class="md-tabs__link">
+        Projects
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../dev/docker/" class="md-tabs__link">
+        Dev References
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cs/cs_books/" class="md-tabs__link">
+        Resources
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sutd/bookmarks/" class="md-tabs__link">
+        SUTD
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="WNDI" class="md-nav__button md-logo" aria-label="WNDI">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"/></svg>
+
+    </a>
+    WNDI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" data-md-state="indeterminate" type="checkbox" id="nav-2" checked>
+      
+      <label class="md-nav__link" for="nav-2">
+        Projects
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Projects" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/dotfiles/" class="md-nav__link">
+        Dotfiles
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" data-md-state="indeterminate" type="checkbox" id="nav-3" checked>
+      
+      <label class="md-nav__link" for="nav-3">
+        Dev References
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Dev References" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Dev References
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" data-md-state="indeterminate" type="checkbox" id="nav-3-1" checked>
+      
+      <label class="md-nav__link" for="nav-3-1">
+        Dev Tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Dev Tools" data-md-level="2">
+        <label class="md-nav__title" for="nav-3-1">
+          <span class="md-nav__icon md-icon"></span>
+          Dev Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/vim_ref/" class="md-nav__link">
+        VIM
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/tmux_ref/" class="md-nav__link">
+        Tmux
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" data-md-state="indeterminate" type="checkbox" id="nav-3-2" checked>
+      
+      <label class="md-nav__link" for="nav-3-2">
+        Networking
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Networking" data-md-level="2">
+        <label class="md-nav__title" for="nav-3-2">
+          <span class="md-nav__icon md-icon"></span>
+          Networking
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/dns/" class="md-nav__link">
+        DNS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/ssh/" class="md-nav__link">
+        SSH
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/tls_certificate/" class="md-nav__link">
+        TLS Certificate
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/nps/" class="md-nav__link">
+        NPS
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" data-md-state="indeterminate" type="checkbox" id="nav-3-3" checked>
+      
+      <label class="md-nav__link" for="nav-3-3">
+        Linux
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="nav-3-3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/linux-commands/" class="md-nav__link">
+        Linux Commands
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/linux-distros/" class="md-nav__link">
+        Linux Distros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/linux-mount-gdrive/" class="md-nav__link">
+        Mount G-Drive headlessly
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" data-md-state="indeterminate" type="checkbox" id="nav-3-4" checked>
+      
+      <label class="md-nav__link" for="nav-3-4">
+        Languages
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Languages" data-md-level="2">
+        <label class="md-nav__title" for="nav-3-4">
+          <span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/latex_ref/" class="md-nav__link">
+        LaTex
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" data-md-state="indeterminate" type="checkbox" id="nav-3-5" checked>
+      
+      <label class="md-nav__link" for="nav-3-5">
+        NVIDIA
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="NVIDIA" data-md-level="2">
+        <label class="md-nav__title" for="nav-3-5">
+          <span class="md-nav__icon md-icon"></span>
+          NVIDIA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/nvidia_driver/" class="md-nav__link">
+        Install Driver on Ubuntu
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" data-md-state="indeterminate" type="checkbox" id="nav-4" checked>
+      
+      <label class="md-nav__link" for="nav-4">
+        Resources
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/cs_books/" class="md-nav__link">
+        CS Books
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/cs_courses/" class="md-nav__link">
+        CS Online Courses
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" data-md-state="indeterminate" type="checkbox" id="nav-4-3" checked>
+      
+      <label class="md-nav__link" for="nav-4-3">
+        CS Education at SUTD
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CS Education at SUTD" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-3">
+          <span class="md-nav__icon md-icon"></span>
+          CS Education at SUTD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/istd_term4/" class="md-nav__link">
+        ISTD TERM 4
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/istd_term5/" class="md-nav__link">
+        ISTD TERM 5
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recomm/tools/" class="md-nav__link">
+        Tools
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" data-md-state="indeterminate" type="checkbox" id="nav-5" checked>
+      
+      <label class="md-nav__link" for="nav-5">
+        SUTD
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="SUTD" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          SUTD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sutd/bookmarks/" class="md-nav__link">
+        SUTD Bookmarks
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-git-and-github" class="md-nav__link">
+    What is the difference between Git and GitHub?
+  </a>
+  
+    <nav class="md-nav" aria-label="What is the difference between Git and GitHub?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    TLDR:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-version" class="md-nav__link">
+    Long version:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-git" class="md-nav__link">
+    Install Git
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-macos" class="md-nav__link">
+    For macOS:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-other-operating-systems" class="md-nav__link">
+    For Other Operating Systems:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-git" class="md-nav__link">
+    Configure Git
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-git-username-and-email-address" class="md-nav__link">
+    Setting up Git username and email address
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-with-local-git-repositories" class="md-nav__link">
+    Work with local Git repositories
+  </a>
+  
+    <nav class="md-nav" aria-label="Work with local Git repositories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-init" class="md-nav__link">
+    git init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-add" class="md-nav__link">
+    git add
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-commit" class="md-nav__link">
+    git commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-commit-a" class="md-nav__link">
+    git commit -a
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-branch" class="md-nav__link">
+    git branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-checkout" class="md-nav__link">
+    git checkout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-log" class="md-nav__link">
+    git log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-status" class="md-nav__link">
+    git status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-help-git-command" class="md-nav__link">
+    git help &lt;git command&gt;
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-with-remote-git-repositories" class="md-nav__link">
+    Work with remote Git repositories
+  </a>
+  
+    <nav class="md-nav" aria-label="Work with remote Git repositories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-started-with-github" class="md-nav__link">
+    Get started with GitHub
+  </a>
+  
+    <nav class="md-nav" aria-label="Get started with GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-clone" class="md-nav__link">
+    git clone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-push" class="md-nav__link">
+    git push
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-remote" class="md-nav__link">
+    git remote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-fetch" class="md-nav__link">
+    git fetch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-pull" class="md-nav__link">
+    git pull
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-merge" class="md-nav__link">
+    git merge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-blame" class="md-nav__link">
+    git blame
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribute-to-someones-repository" class="md-nav__link">
+    Contribute to Someone's Repository
+  </a>
+  
+    <nav class="md-nav" aria-label="Contribute to Someone's Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contribute-to-a-project-where-you-have-collaborator-access" class="md-nav__link">
+    Contribute to a project where you have collaborator access
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contribute-to-a-project-where-you-dont-have-write-access" class="md-nav__link">
+    Contribute to a project where you don't have write access
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undoing-commits-changes" class="md-nav__link">
+    Undoing Commits &amp; Changes
+  </a>
+  
+    <nav class="md-nav" aria-label="Undoing Commits &amp; Changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-checkout_1" class="md-nav__link">
+    git checkout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-clean" class="md-nav__link">
+    git clean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-revert" class="md-nav__link">
+    git revert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-reset" class="md-nav__link">
+    git reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-rm" class="md-nav__link">
+    git rm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-clone-a-remote-branch-other-than-the-default-branch" class="md-nav__link">
+    How to clone a remote branch other than the default branch?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-un-stage-a-file" class="md-nav__link">
+    How to un-stage a file?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-change-a-commit-message" class="md-nav__link">
+    How to change a commit message?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-roll-back-to-a-particular-commit" class="md-nav__link">
+    How to roll back to a particular commit?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-delete-a-branch" class="md-nav__link">
+    How to delete a branch?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-make-git-stop-tracking-a-file" class="md-nav__link">
+    How to make Git stop tracking a file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-let-git-ignore-certain-files" class="md-nav__link">
+    How to let git ignore certain files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-readings" class="md-nav__link">
+    Further Readings
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="get-started-with-git-github">Get Started with Git &amp; GitHub<a class="headerlink" href="#get-started-with-git-github" title="Permanent link">#</a></h1>
+<h2 id="what-is-the-difference-between-git-and-github">What is the difference between Git and GitHub?<a class="headerlink" href="#what-is-the-difference-between-git-and-github" title="Permanent link">#</a></h2>
+<h4 id="tldr">TLDR:<a class="headerlink" href="#tldr" title="Permanent link">#</a></h4>
+<ul>
+<li>
+<p><strong><code>Git</code></strong> is a version control software that manages your local git repositories.</p>
+</li>
+<li>
+<p><strong><code>GitHub</code></strong> is an online hosting service for your git repositories.</p>
+</li>
+</ul>
+<h4 id="long-version">Long version:<a class="headerlink" href="#long-version" title="Permanent link">#</a></h4>
+<ul>
+<li>
+<p><strong><code>Git</code></strong> is open-source software that helps you manage code versions, keep track of file changes. You can interact with <code>git</code> using CLI (Command Line Interface), meaning you type in git commands in your shell/ terminals. Alternatively, you can choose to use a third-party GUI (Graphical User Interface) from <a href="https://git-scm.com/downloads/guis/">here</a>.</p>
+</li>
+<li>
+<p><strong><code>GitHub</code></strong> is an online platform developed by a company and then acquired by Microsoft in 2018. GitHub, the platform, provides free hosting service for git repositories, which usually contains code or text files. It also enables collaboration on projects, since the repository is hosted on the cloud, teams can collaborate on the project repository from different locations. GitHub is an online service that is built around git, making git more convenient and powerful for programmers especially teams.</p>
+</li>
+</ul>
+<h2 id="install-git">Install Git<a class="headerlink" href="#install-git" title="Permanent link">#</a></h2>
+<h4 id="for-macos">For macOS:<a class="headerlink" href="#for-macos" title="Permanent link">#</a></h4>
+<p>Just run the following command in your terminal to check your git version, it will prompt you to install Git if you don't have it.</p>
+<div class="highlight"><pre><span></span><code>git --version
+</code></pre></div>
+<h4 id="for-other-operating-systems">For Other Operating Systems:<a class="headerlink" href="#for-other-operating-systems" title="Permanent link">#</a></h4>
+<p>Refer to: <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Getting Started Installing Git</a></p>
+<h2 id="configure-git">Configure Git<a class="headerlink" href="#configure-git" title="Permanent link">#</a></h2>
+<h4 id="setting-up-git-username-and-email-address">Setting up Git username and email address<a class="headerlink" href="#setting-up-git-username-and-email-address" title="Permanent link">#</a></h4>
+<p>Just letting <code>Git</code> know who you are. If you already have a <code>GitHub</code> account, keep the email address for your <code>Git</code> at local same as your <code>GitHub</code> email address.</p>
+<ul>
+<li>To check current username and email address for Git.</li>
+<li>It returns nothing if no name/email has been set.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>git config --global user.name
+git config --global user.email
+</code></pre></div>
+<ul>
+<li>To set username and email address for Git.</li>
+<li><code>--global</code> means to set for all the repositories on your machine.</li>
+<li>If you only want to set for a single repository, do it without the <code>--global</code> flag.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>git config --global user.name &quot;Tom Cruise&quot;
+git config --global user.email &quot;tom@example.com&quot;
+</code></pre></div>
+<h2 id="work-with-local-git-repositories">Work with local Git repositories<a class="headerlink" href="#work-with-local-git-repositories" title="Permanent link">#</a></h2>
+<h4 id="git-init"><code>git init</code><a class="headerlink" href="#git-init" title="Permanent link">#</a></h4>
+<ul>
+<li>initiate a git repository at current working directory</li>
+<li>a hidden folder <code>.git/</code> will be created, thats where all git-related stuff will be stored.</li>
+</ul>
+<h4 id="git-add"><code>git add</code><a class="headerlink" href="#git-add" title="Permanent link">#</a></h4>
+<ul>
+<li>Any changes you made inside a <code>git</code> repository have to be <strong>staged</strong> first before <strong>committing</strong>.</li>
+<li>It is a way to let <code>git</code> know what are the files/changes you want <code>git</code> to keep track of.</li>
+<li><code>git add &lt;filename&gt;</code> stages your changes on <code>&lt;filename&gt;</code>.</li>
+<li><code>git add -all</code> stages all your untracked changes within the repository.</li>
+</ul>
+<h4 id="git-commit"><code>git commit</code><a class="headerlink" href="#git-commit" title="Permanent link">#</a></h4>
+<ul>
+<li><code>git commit -m "YOUR COMMIT MSG"</code> commits (saves) your staged changes with a short commit message.</li>
+</ul>
+<h4 id="git-commit-a"><code>git commit -a</code><a class="headerlink" href="#git-commit-a" title="Permanent link">#</a></h4>
+<ul>
+<li><code>git commit -a</code> is a combination of <code>git add --all</code> and <code>git commit</code>.</li>
+<li>This command automatically stages and commits files that have been modified and deleted, but not new files you have just created.</li>
+</ul>
+<h4 id="git-branch"><code>git branch</code><a class="headerlink" href="#git-branch" title="Permanent link">#</a></h4>
+<ul>
+<li><code>git branch</code> shows what branches you have.</li>
+<li><code>git branch -vv</code> shows your branches with more details.</li>
+<li><code>git branch &lt;NEW BRANCH NAME&gt;</code> creates a new branch from current head.</li>
+</ul>
+<h4 id="git-checkout"><code>git checkout</code><a class="headerlink" href="#git-checkout" title="Permanent link">#</a></h4>
+<ul>
+<li><code>git checkout</code> operates upon three distinct entities: <code>files</code>, <code>commits</code>, and <code>branches</code>.</li>
+<li><code>git checkout &lt;BRANCH NAME&gt;</code> switches to another existing branch.</li>
+<li><code>git checkout -b &lt;NEW BRANCH NAME&gt;</code> creates a new branch and switches to it simultaneously.</li>
+<li><code>git checkout &lt;COMMIT HASH STRING&gt;</code></li>
+</ul>
+<h4 id="git-log"><code>git log</code><a class="headerlink" href="#git-log" title="Permanent link">#</a></h4>
+<ul>
+<li><code>git log</code> shows your commit history.</li>
+<li><code>git log --oneline</code> shows your commit history, one commit per line.</li>
+<li><code>git log --graph</code> shows your commit history with a simple graph illustration.</li>
+</ul>
+<h4 id="git-status"><code>git status</code><a class="headerlink" href="#git-status" title="Permanent link">#</a></h4>
+<ul>
+<li><code>git status</code> allows your to check:<ul>
+<li>which branch are you in?</li>
+<li>Is this branch up to date with master branch?</li>
+<li>what are the staged files that are not yet committed?</li>
+<li>what are the not yet staged files?</li>
+</ul>
+</li>
+</ul>
+<h4 id="git-help-git-command"><code>git help &lt;git command&gt;</code><a class="headerlink" href="#git-help-git-command" title="Permanent link">#</a></h4>
+<ul>
+<li>get help on a particular git command.</li>
+<li>for example, you can do <code>git help branch</code></li>
+</ul>
+<hr />
+<h2 id="work-with-remote-git-repositories">Work with remote Git repositories<a class="headerlink" href="#work-with-remote-git-repositories" title="Permanent link">#</a></h2>
+<h3 id="get-started-with-github">Get started with GitHub<a class="headerlink" href="#get-started-with-github" title="Permanent link">#</a></h3>
+<ol>
+<li>Create a GitHub account</li>
+<li>Create a repo on GitHub</li>
+<li>Initiate your repo with a <code>README.md</code> file</li>
+<li>Clone your own repo to local</li>
+<li>Create a new file / make changes to your files</li>
+<li>Stage your changes</li>
+<li>Commit Changes</li>
+<li>Push commits to GitHub</li>
+</ol>
+<h4 id="git-clone"><code>git clone</code><a class="headerlink" href="#git-clone" title="Permanent link">#</a></h4>
+<p>"Clone" means to copy or download a remote repository to your local machine.</p>
+<ul>
+<li>Clone a repository does not affect the original repository in any way, since you just make a copy only.</li>
+<li>You can clone your own repository and others' repository, basically any public repository.</li>
+<li>If you are cloning your own private repository, you will be required to log into your GitHub account after you key in the clone command.  </li>
+<li>When you clone a repository with <code>git clone</code>, it automatically creates a <code>remote</code> connection called <code>origin</code> pointing back to the cloned repository. This is useful for developers creating a local copy of a central repository, since it provides an easy way to pull upstream changes or publish local commits. This behaviour is also why most Git-based projects call their central repository origin.</li>
+</ul>
+<p><em>Example:</em></p>
+<ol>
+<li>
+<p>Go to your interested GitHub repository page, copy the <code>clone</code> URL</p>
+<p><img src="../pics/git_clone.png" alt="" width=300 height=auto></p>
+</li>
+<li>
+<p>Use terminal and navigate to the root directory you wish to clone the repo into.</p>
+</li>
+<li>
+<p>Example: <code>git clone https://GitHub.com/MarkHershey/notebook.git</code></p>
+</li>
+</ol>
+<p><img src="../pics/git_clone_2.png" alt="" width=600 height=auto></p>
+<h4 id="git-push"><code>git push</code><a class="headerlink" href="#git-push" title="Permanent link">#</a></h4>
+<ul>
+<li><code>git push &lt;REMOTE NAME&gt; &lt;BRANCH NAME&gt;</code> pushes commits to specified remote branch.</li>
+</ul>
+<h4 id="git-remote"><code>git remote</code><a class="headerlink" href="#git-remote" title="Permanent link">#</a></h4>
+<ul>
+<li><code>git remote -v</code> checks any remote links to current repository。</li>
+<li><code>git remote add &lt;NAME&gt; &lt;URL&gt;</code> add remote connection.</li>
+<li><code>git remote rm &lt;NAME&gt;</code> removes a remote connection.</li>
+<li><code>git remote rename &lt;OLD NAME&gt; &lt;NEW NAME&gt;</code> renames a remote connection.</li>
+</ul>
+<h4 id="git-fetch"><code>git fetch</code><a class="headerlink" href="#git-fetch" title="Permanent link">#</a></h4>
+<ul>
+<li><code>git fetch</code> downloads any updates from remote。</li>
+<li><code>git fetch &lt;remote&gt;</code></li>
+<li><code>git fetch --all</code></li>
+</ul>
+<h4 id="git-pull"><code>git pull</code><a class="headerlink" href="#git-pull" title="Permanent link">#</a></h4>
+<h4 id="git-merge"><code>git merge</code><a class="headerlink" href="#git-merge" title="Permanent link">#</a></h4>
+<h4 id="git-blame"><code>git blame</code><a class="headerlink" href="#git-blame" title="Permanent link">#</a></h4>
+<ul>
+<li><code>git blame &lt;filename&gt;</code> allows you to check who contributed which line inside a file.</li>
+<li><code>git blame -L 1,5 &lt;filename&gt;</code> for showing line 1 to 5 only.</li>
+<li><code>git blame -L 1,+5 &lt;filename&gt;</code> for showing 5 lines only starting from line 1.</li>
+<li><code>git blame -e &lt;filename&gt;</code> for showing user.email instead of user.name</li>
+</ul>
+<h2 id="contribute-to-someones-repository">Contribute to Someone's Repository<a class="headerlink" href="#contribute-to-someones-repository" title="Permanent link">#</a></h2>
+<h4 id="contribute-to-a-project-where-you-have-collaborator-access">Contribute to a project where you have collaborator access<a class="headerlink" href="#contribute-to-a-project-where-you-have-collaborator-access" title="Permanent link">#</a></h4>
+<ol>
+<li>Create a new <code>branch</code>.</li>
+<li>Make changes on your <code>branch</code>.</li>
+<li>Open a Pull Request to merge your <code>branch</code> to <code>master</code> <code>branch</code>.</li>
+</ol>
+<h4 id="contribute-to-a-project-where-you-dont-have-write-access">Contribute to a project where you don't have write access<a class="headerlink" href="#contribute-to-a-project-where-you-dont-have-write-access" title="Permanent link">#</a></h4>
+<ol>
+<li><code>Fork</code> the original repository on GitHub.</li>
+<li>Make changes on your forked repository.</li>
+<li>Open a <code>Pull Request</code> to merge your repo into the original repo.</li>
+</ol>
+<h2 id="undoing-commits-changes">Undoing Commits &amp; Changes<a class="headerlink" href="#undoing-commits-changes" title="Permanent link">#</a></h2>
+<p><a href="https://www.atlassian.com/git/tutorials/undoing-changes">Reference</a></p>
+<h4 id="git-checkout_1"><code>git checkout</code><a class="headerlink" href="#git-checkout_1" title="Permanent link">#</a></h4>
+<ol>
+<li>Use <code>git checkout &lt;COMMIT HASH&gt;</code> to view the commit you want to revert back to. Now, you have entered a <code>detached HEAD</code> state.</li>
+<li>Create a new branch from here by using <code>checkout -b &lt;NEW BRANCH NAME&gt;</code></li>
+</ol>
+<h4 id="git-clean"><code>git clean</code><a class="headerlink" href="#git-clean" title="Permanent link">#</a></h4>
+<h4 id="git-revert"><code>git revert</code><a class="headerlink" href="#git-revert" title="Permanent link">#</a></h4>
+<ul>
+<li><code>git revert &lt;COMMIT HASH&gt;</code> creates a new commit at <code>HEAD</code> that revert the changes made in the commit specified only. It does not change history, it does not revert commit in between current <code>HEAD</code> and the commit specified.</li>
+</ul>
+<h4 id="git-reset"><code>git reset</code><a class="headerlink" href="#git-reset" title="Permanent link">#</a></h4>
+<ul>
+<li><code>git reset --hard master</code></li>
+</ul>
+<h4 id="git-rm"><code>git rm</code><a class="headerlink" href="#git-rm" title="Permanent link">#</a></h4>
+<hr />
+<h4 id="how-to-clone-a-remote-branch-other-than-the-default-branch">How to clone a remote branch other than the default branch?<a class="headerlink" href="#how-to-clone-a-remote-branch-other-than-the-default-branch" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code>git checkout --track origin/other-branch
+</code></pre></div>
+<h4 id="how-to-un-stage-a-file">How to un-stage a file?<a class="headerlink" href="#how-to-un-stage-a-file" title="Permanent link">#</a></h4>
+<h4 id="how-to-change-a-commit-message">How to change a commit message?<a class="headerlink" href="#how-to-change-a-commit-message" title="Permanent link">#</a></h4>
+<h4 id="how-to-roll-back-to-a-particular-commit">How to roll back to a particular commit?<a class="headerlink" href="#how-to-roll-back-to-a-particular-commit" title="Permanent link">#</a></h4>
+<h4 id="how-to-delete-a-branch">How to delete a branch?<a class="headerlink" href="#how-to-delete-a-branch" title="Permanent link">#</a></h4>
+<h4 id="how-to-make-git-stop-tracking-a-file">How to make Git stop tracking a file<a class="headerlink" href="#how-to-make-git-stop-tracking-a-file" title="Permanent link">#</a></h4>
+<h4 id="how-to-let-git-ignore-certain-files">How to let git ignore certain files<a class="headerlink" href="#how-to-let-git-ignore-certain-files" title="Permanent link">#</a></h4>
+<hr />
+<h2 id="further-readings">Further Readings<a class="headerlink" href="#further-readings" title="Permanent link">#</a></h2>
+<ul>
+<li>Great <code>Git</code> tutorials by <a href="https://www.atlassian.com/git/tutorials/syncing">Atlassian Bitbucket</a></li>
+<li>If you want to learn <code>Git</code> more systematically, <a href="https://git-scm.com/book/en/v2">Pro Git</a> is a great book.</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Mark Huang &copy; 2019-2021. All Rights Reserved.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/MarkHershey/docs" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.217ffd95.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.926459b3.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
