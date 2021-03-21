@@ -65,7 +65,7 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-# Navigations
+# Navigation menu
 nav:
     - Home: 'index.md'
     - Projects:
@@ -75,7 +75,10 @@ nav:
         - Docker: 'dev/docker.md'
         - VIM: 'dev/vim_ref.md'
         - Tmux: 'dev/tmux_ref.md'
+        - Git: 'dev/git.md'
       - Networking:
+        - Inter-Process Comms: 'dev/ipc.md'
+        - Internet Protocols: 'dev/internet_protocols.md'
         - DNS: 'dev/dns.md'
         - SSH: 'dev/ssh.md'
         - TLS Certificate: 'dev/tls_certificate.md'
@@ -88,6 +91,7 @@ nav:
         - LaTex: 'dev/latex_ref.md'
       - NVIDIA:
         - Install Driver on Ubuntu: 'dev/nvidia_driver.md'
+        - NVIDIA_SMI Commands: 'dev/nvidia-smi.md'
     - Resources:
       - CS Books: 'cs/cs_books.md'
       - CS Online Courses: 'cs/cs_courses.md'

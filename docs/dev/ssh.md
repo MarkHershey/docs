@@ -9,7 +9,6 @@
 3. Host Based Authentication (Whitelisting)
 
 
-
 ## Setting up Public Key Authentication
 
 The motivation for using public key authentication over simple passwords is security. Public key authentication provides cryptographic strength that even extremely long passwords can not offer. With SSH, public key authentication improves security considerably as it frees the users from remembering complicated passwords (or worse yet, writing them down).
@@ -43,9 +42,6 @@ Key pair generated will be stored at the following path by default:
 
 - `~/.ssh/id_rsa` (Private Key)
 - `~/.ssh/id_rsa.pub` (Public Key)
-
-
-
 
 
 ### Step 2: Add the public key to a server
@@ -96,10 +92,6 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub user@host
 >It further ensures that the key files have appropriate permissions. Generally, the user's home directory or any file or directory containing keys files should not be writable by anyone else. Otherwise someone else could add new authorized keys for the user and gain access. Private key files should not be readable by anyone else.
 >
 > Reference: [www.ssh.com/ssh/copy-id](https://www.ssh.com/ssh/copy-id)
-
-
-
-
 
 
 
