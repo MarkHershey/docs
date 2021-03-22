@@ -3,7 +3,7 @@
 
 ## What is the difference between Git and GitHub?
 
-#### TLDR:
+#### TL;DR:
 - **`Git`** is a version control software that manages your local git repositories.
 
 - **`GitHub`** is an online hosting service for your git repositories.
@@ -20,17 +20,24 @@
 
 Just run the following command in your terminal to check your git version, it will prompt you to install Git if you don't have it.
 
-```
+```bash
 git --version
 ```
 
-#### For Other Operating Systems:
+#### For Ubuntu Linux:
 
-Refer to: [Getting Started Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+```bash
+sudo apt update && sudo apt install git -y
+```
+
+#### For other platforms:
+
+- Refer to: [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ## Configure Git
 
 #### Setting up Git username and email address
+
 Just letting `Git` know who you are. If you already have a `GitHub` account, keep the email address for your `Git` at local same as your `GitHub` email address.
 
 - To check current username and email address for Git.
@@ -39,7 +46,6 @@ Just letting `Git` know who you are. If you already have a `GitHub` account, kee
 ```
 git config --global user.name
 git config --global user.email
-
 ```
 
 - To set username and email address for Git.
@@ -49,7 +55,6 @@ git config --global user.email
 ```
 git config --global user.name "Tom Cruise"
 git config --global user.email "tom@example.com"
-
 ```
 
 
@@ -65,12 +70,13 @@ git config --global user.email "tom@example.com"
 - Any changes you made inside a `git` repository have to be **staged** first before **committing**.
 - It is a way to let `git` know what are the files/changes you want `git` to keep track of.
 - `git add <filename>` stages your changes on `<filename>`.
-- `git add -all` stages all your untracked changes within the repository.
+- `git add --all` stages all your untracked changes within the repository.
 
 
 #### `git commit`
 
 - `git commit -m "YOUR COMMIT MSG"` commits (saves) your staged changes with a short commit message.
+- `git commit --amend` amends the commit message of the last commit.
 
 #### `git commit -a`
 
@@ -82,6 +88,7 @@ git config --global user.email "tom@example.com"
 - `git branch` shows what branches you have.
 - `git branch -vv` shows your branches with more details.
 - `git branch <NEW BRANCH NAME>` creates a new branch from current head.
+- `git branch -d <BRANCH NAME>` deletes the specified local branch.
 
 #### `git checkout`
 
@@ -118,18 +125,6 @@ git config --global user.email "tom@example.com"
 
 ## Work with remote Git repositories
 
-
-### Get started with GitHub
-
-1. Create a GitHub account
-2. Create a repo on GitHub
-3. Initiate your repo with a `README.md` file
-4. Clone your own repo to local
-5. Create a new file / make changes to your files
-6. Stage your changes
-7. Commit Changes
-8. Push commits to GitHub
-
 #### `git clone`
 "Clone" means to copy or download a remote repository to your local machine.
 
@@ -138,39 +133,29 @@ git config --global user.email "tom@example.com"
 - If you are cloning your own private repository, you will be required to log into your GitHub account after you key in the clone command.  
 - When you clone a repository with `git clone`, it automatically creates a `remote` connection called `origin` pointing back to the cloned repository. This is useful for developers creating a local copy of a central repository, since it provides an easy way to pull upstream changes or publish local commits. This behaviour is also why most Git-based projects call their central repository origin.
 
-*Example:*
-
-1. Go to your interested GitHub repository page, copy the `clone` URL
-
-    <img src="../pics/git_clone.png" alt="" width=300 height=auto>
-
-
-2. Use terminal and navigate to the root directory you wish to clone the repo into.
-
-3. Example: `git clone https://GitHub.com/MarkHershey/notebook.git`
-
-<img src="../pics/git_clone_2.png" alt="" width=600 height=auto>
-
 #### `git push`
 
 - `git push <REMOTE NAME> <BRANCH NAME>` pushes commits to specified remote branch.
 
 #### `git remote`
 
-- `git remote -v` checks any remote links to current repository。
+- `git remote -v` checks any remote links to current repository.
 - `git remote add <NAME> <URL>` add remote connection.
 - `git remote rm <NAME>` removes a remote connection.
 - `git remote rename <OLD NAME> <NEW NAME>` renames a remote connection.
 
 #### `git fetch`
 
-- `git fetch` downloads any updates from remote。
+- `git fetch` downloads any updates from remote.
 - `git fetch <remote>`
 - `git fetch --all`
 
+#### `git merge`
+
 #### `git pull`
 
-#### `git merge`
+- `git pull` gets new commits from remote to local
+- `git pull` is a combination of `git fetch` and `git merge`
 
 #### `git blame`
 
@@ -186,11 +171,11 @@ git config --global user.email "tom@example.com"
 
 1. Create a new `branch`.
 2. Make changes on your `branch`.
-3. Open a Pull Request to merge your `branch` to `master` `branch`.
+3. Open a `Pull Request` to merge your `branch` to the `master branch`.
 
 #### Contribute to a project where you don't have write access
 
-1. `Fork` the original repository on GitHub.
+1. Create a `Fork` of the original repository on GitHub.
 2. Make changes on your forked repository.
 3. Open a `Pull Request` to merge your repo into the original repo.
 
@@ -198,7 +183,18 @@ git config --global user.email "tom@example.com"
 
 ## Undoing Commits & Changes
 
-[Reference](https://www.atlassian.com/git/tutorials/undoing-changes)
+Reference: [Atlassian - Undoing Commits & Changes](https://www.atlassian.com/git/tutorials/undoing-changes)
+
+#### `git reset`
+
+- `git reset <file>` / `git reset HEAD <file>` un-stage the specific files.
+- `git reset` / `git reset HEAD` un-stage everything; move everything out from staging area.
+- `git reset --hard` / `git reset --hard HEAD`discard any not yet committed changes, which includes changes in staging area and changes not yet staged. Un-tracked changes will be ignored.
+- `git reset <COMMIT HASH>` goes back in time! It rolls back to the particular commit, discard any commits after that point. Un-tracked changes will be ignored. This method of undoing changes has the cleanest effect on history, but a portion of commit histories are wiped, hence, use with cautious and only use when necessary.
+
+#### `git revert`
+
+- `git revert <COMMIT HASH>` creates a new commit at `HEAD` that revert the changes made in the commit specified only. It does not change history, it does not revert commit in between current `HEAD` and the commit specified. This is always the preferred method to undo changes because 1. it does not wipe any history, 2. it has no problem merging with remote repository.
 
 #### `git checkout`
 
@@ -207,37 +203,21 @@ git config --global user.email "tom@example.com"
 
 #### `git clean`
 
-#### `git revert`
-
-- `git revert <COMMIT HASH>` creates a new commit at `HEAD` that revert the changes made in the commit specified only. It does not change history, it does not revert commit in between current `HEAD` and the commit specified.
-
-
-#### `git reset`
-
-- `git reset --hard master`
-
-#### `git rm`
+- `git clean -i` removes un-tracked files from the working tree interactively.
+- `git clean -f` removes un-tracked files from the working tree by force.
+- `git clean -n` dry-run `git clean -f`, show the un-tracked files to be removed.
+- `git clean -X` removes only files ignored by Git.
 
 ---
 
-#### How to clone a remote branch other than the default branch?
+#### How to fetch a remote branch other than the default branch?
 
 ```
-git checkout --track origin/other-branch
+git checkout --track origin/branch-name
 ```
-
-#### How to un-stage a file?
-
-#### How to change a commit message?
-
-#### How to roll back to a particular commit?
-
-#### How to delete a branch?
-
-#### How to make Git stop tracking a file
-
-#### How to let git ignore certain files
-
+1. This will fetch the remote branch to local.
+2. Auto set up to track remote branch.
+3. Auto switch to the branch.
 
 ---
 
