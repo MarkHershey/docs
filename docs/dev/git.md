@@ -8,15 +8,15 @@
 
 - **`GitHub`** is an online hosting service for your git repositories.
 
-#### Long version:
+#### Longer version:
 - **`Git`** is open-source software that helps you manage code versions, keep track of file changes. You can interact with `git` using CLI (Command Line Interface), meaning you type in git commands in your shell/ terminals. Alternatively, you can choose to use a third-party GUI (Graphical User Interface) from [here](https://git-scm.com/downloads/guis/).
 
-- **`GitHub`** is an online platform developed by a company and then acquired by Microsoft in 2018. GitHub, the platform, provides free hosting service for git repositories, which usually contains code or text files. It also enables collaboration on projects, since the repository is hosted on the cloud, teams can collaborate on the project repository from different locations. GitHub is an online service that is built around git, making git more convenient and powerful for programmers especially teams.
+- **`GitHub`** is an online platform developed by Logical Awesome LLC and then acquired by Microsoft in 2018. GitHub, the platform, provides free hosting service for git repositories, which usually contains code or text files. It also enables collaboration on projects, since the repository is hosted on the cloud, teams can synchronize and collaborate on the project repository from different locations. GitHub also build services around git like GitHub Actions for CI/CD, making git more powerful for software engineering projects.
 
 
 ## Install Git
 
-#### For macOS:
+#### macOS
 
 Just run the following command in your terminal to check your git version, it will prompt you to install Git if you don't have it.
 
@@ -24,15 +24,16 @@ Just run the following command in your terminal to check your git version, it wi
 git --version
 ```
 
-#### For Ubuntu Linux:
+#### Linux (Ubuntu)
 
 ```bash
 sudo apt update && sudo apt install git -y
 ```
 
-#### For other platforms:
+#### Other Platforms
 
 - Refer to: [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
 
 ## Configure Git
 
@@ -70,7 +71,13 @@ git config --global user.email "tom@example.com"
 - Any changes you made inside a `git` repository have to be **staged** first before **committing**.
 - It is a way to let `git` know what are the files/changes you want `git` to keep track of.
 - `git add <filename>` stages your changes on `<filename>`.
-- `git add --all` stages all your untracked changes within the repository.
+- `git add --all` / `git add -A` stages all your un-tracked changes within the repository.
+
+| | New files | Modified files | Deleted files | Hidden files | Current directory | Higher directories|
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| `git add -A ` | Yes | Yes | Yes | Yes | Yes | Yes |
+| `git add .` | Yes | Yes | Yes | Yes | Yes | No |
+| `git add -u` | No | Yes | Yes | Yes | Yes | Yes |
 
 
 #### `git commit`
@@ -120,14 +127,13 @@ git config --global user.email "tom@example.com"
 - for example, you can do `git help branch`
 
 
-
 ---
 
 ## Work with remote Git repositories
 
 #### `git clone`
-"Clone" means to copy or download a remote repository to your local machine.
 
+- "Clone" means to copy or download a remote repository to your local machine.
 - Clone a repository does not affect the original repository in any way, since you just make a copy only.
 - You can clone your own repository and others' repository, basically any public repository.
 - If you are cloning your own private repository, you will be required to log into your GitHub account after you key in the clone command.  
