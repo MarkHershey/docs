@@ -3,12 +3,12 @@
 
 ## What is the difference between Git and GitHub?
 
-#### TL;DR:
+#### TL;DR
 - **`Git`** is a version control software that manages your local git repositories.
 
 - **`GitHub`** is an online hosting service for your git repositories.
 
-#### Longer version:
+#### Longer version
 - **`Git`** is open-source software that helps you manage code versions, keep track of file changes. You can interact with `git` using CLI (Command Line Interface), meaning you type in git commands in your shell/ terminals. Alternatively, you can choose to use a third-party GUI (Graphical User Interface) from [here](https://git-scm.com/downloads/guis/).
 
 - **`GitHub`** is an online platform developed by Logical Awesome LLC and then acquired by Microsoft in 2018. GitHub, the platform, provides free hosting service for git repositories, which usually contains code or text files. It also enables collaboration on projects, since the repository is hosted on the cloud, teams can synchronize and collaborate on the project repository from different locations. GitHub also build services around git like GitHub Actions for CI/CD, making git more powerful for software engineering projects.
@@ -76,8 +76,8 @@ git config --global user.email "tom@example.com"
 | | New files | Modified files | Deleted files | Hidden files | Current directory | Higher directories|
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | `git add -A ` | Yes | Yes | Yes | Yes | Yes | Yes |
-| `git add .` | Yes | Yes | Yes | Yes | Yes | No |
-| `git add -u` | No | Yes | Yes | Yes | Yes | Yes |
+| `git add .` | Yes | Yes | Yes | Yes | Yes | **No** |
+| `git add -u` | **No** | Yes | Yes | Yes | Yes | Yes |
 
 
 #### `git commit`
@@ -218,9 +218,10 @@ Reference: [Atlassian - Undoing Commits & Changes](https://www.atlassian.com/git
 
 #### How to fetch a remote branch other than the default branch?
 
-```
+```bash
 git checkout --track origin/branch-name
 ```
+
 1. This will fetch the remote branch to local.
 2. Auto set up to track remote branch.
 3. Auto switch to the branch.

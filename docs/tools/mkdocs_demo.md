@@ -1,5 +1,7 @@
 # Demo Page for MkDocs Material
 
+- [View raw source file of this page](https://raw.githubusercontent.com/MarkHershey/docs/master/docs/tools/mkdocs_demo.md)
+
 ## Text Formatting 
 
 - **Bold**
