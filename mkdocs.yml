@@ -99,8 +99,8 @@ nav:
         - ISTD TERM 4: 'cs/istd_term4.md'
         - ISTD TERM 5: 'cs/istd_term5.md'
       - Tools: 
-        - Tools: 'tools/toolkit.md'
-        - Static-site Generators: 'tools/mkdocs_demo.md'
+        - Toolkit: 'tools/toolkit.md'
+        - Static Site Generators: 'tools/static_site_generators.md'
         - MkDocs Material: 'tools/mkdocs_demo.md'
     - SUTD:
       - SUTD Bookmarks: 'sutd/bookmarks.md'
