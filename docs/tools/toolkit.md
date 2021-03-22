@@ -2,9 +2,11 @@
 
 ### OCR
 
-Best free OCR
+- [ocr.space](http://ocr.space/) Web, API (Best free OCR)
 
-- [ocr.space](http://ocr.space/) Web, API
+### PDF
+
+- [Smallpdf](https://smallpdf.com/) Online PDF manipulation
 
 ### Translation
 

@@ -33,3 +33,12 @@
 - Clean Code: A Handbook of Agile Software Craftsmanship
     - [Oreilly Learning](https://learning.oreilly.com/library/view/clean-code-a/9780136083238/)
     - [Google Books](https://books.google.com.sg/books/about/Clean_Code.html?id=hjEFCAAAQBAJ&source=kp_book_description&redir_esc=y)
+
+
+## Books for CS Job Interviews
+
+- Cracking the Coding Interview (CTCI)
+    - [Website](http://www.crackingthecodinginterview.com/)
+    - 6th Ed. Solutions: [careercup / CtCI-6th-Edition](https://github.com/careercup/CtCI-6th-Edition)
+- Elements of Programming Interviews
+    - [Amazon](https://www.amazon.com/Elements-Programming-Interviews-Insiders-Guide/dp/1479274836)
