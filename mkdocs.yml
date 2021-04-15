@@ -69,38 +69,40 @@ extra_javascript:
 nav:
     - Home: 'index.md'
     - Projects:
-      - Dotfiles: 'project/dotfiles.md'
+      - Dotfiles: 'pages/project/dotfiles.md'
     - Dev References:
       - Dev Tools:
-        - Docker: 'dev/docker.md'
-        - VIM: 'dev/vim_ref.md'
-        - Tmux: 'dev/tmux_ref.md'
-        - Git: 'dev/git.md'
+        - Docker: 'pages/dev/docker.md'
+        - VIM: 'pages/dev/vim_ref.md'
+        - Tmux: 'pages/dev/tmux_ref.md'
+        - Git: 'pages/dev/git.md'
       - Networking:
-        - Inter-Process Comms: 'dev/ipc.md'
-        - Internet Protocols: 'dev/internet_protocols.md'
-        - DNS: 'dev/dns.md'
-        - SSH: 'dev/ssh.md'
-        - TLS Certificate: 'dev/tls_certificate.md'
-        - NPS: 'dev/nps.md'
+        - Inter-Process Comms: 'pages/dev/ipc.md'
+        - Internet Protocols: 'pages/dev/internet_protocols.md'
+        - DNS: 'pages/dev/dns.md'
+        - SSH: 'pages/dev/ssh.md'
+        - TLS Certificate: 'pages/dev/tls_certificate.md'
+        - NPS: 'pages/dev/nps.md'
       - Linux:
-        - Linux Commands: 'dev/linux-commands.md'
-        - Linux Distros: 'dev/linux-distros.md'
-        - Mount G-Drive headlessly : 'dev/linux-mount-gdrive.md'
+        - Linux Commands: 'pages/dev/linux-commands.md'
+        - Linux Distros: 'pages/dev/linux-distros.md'
+        - Mount G-Drive headlessly : 'pages/dev/linux-mount-gdrive.md'
       - Languages:
-        - LaTex: 'dev/latex_ref.md'
+        - LaTex: 'pages/dev/latex_ref.md'
+        - Java:
+          - Concurrency: 'pages/lang/java/concurrency.md'
       - NVIDIA:
-        - Install Driver on Ubuntu: 'dev/nvidia_driver.md'
-        - NVIDIA-SMI Commands: 'dev/nvidia-smi.md'
+        - Install Driver on Ubuntu: 'pages/dev/nvidia_driver.md'
+        - NVIDIA-SMI Commands: 'pages/dev/nvidia-smi.md'
     - Resources:
-      - CS Books: 'cs/cs_books.md'
-      - CS Online Courses: 'cs/cs_courses.md'
+      - CS Books: 'pages/cs/cs_books.md'
+      - CS Online Courses: 'pages/cs/cs_courses.md'
       - CS Education at SUTD:
-        - ISTD TERM 4: 'cs/istd_term4.md'
-        - ISTD TERM 5: 'cs/istd_term5.md'
+        - ISTD TERM 4: 'pages/cs/istd_term4.md'
+        - ISTD TERM 5: 'pages/cs/istd_term5.md'
       - Tools: 
-        - Toolkit: 'tools/toolkit.md'
-        - Static Site Generators: 'tools/static_site_generators.md'
-        - MkDocs Material: 'tools/mkdocs_demo.md'
+        - Toolkit: 'pages/tools/toolkit.md'
+        - Static Site Generators: 'pages/tools/static_site_generators.md'
+        - MkDocs Material: 'pages/tools/mkdocs_demo.md'
     - SUTD:
-      - SUTD Bookmarks: 'sutd/bookmarks.md'
+      - SUTD Bookmarks: 'pages/sutd/bookmarks.md'
