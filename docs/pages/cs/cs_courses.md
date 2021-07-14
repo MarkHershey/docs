@@ -1,4 +1,7 @@
-# Highly Recommended CS Online Courses
+# Computer Science Courses
+
+!!! tip
+    Computer Science might be the most open discipline across all different subjects that human studies. You can definitely acquire sufficient computer science knowledge to achieve anything you want by self-learning. Here are some amazing world-class courses.
 
 ## Intro to CS
 
@@ -30,3 +33,8 @@
 
 - Andrew Ng's [Deep Learning Specialization](https://www.deeplearning.ai/deep-learning-specialization/)
 - Stanford's [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)
+
+## References
+
+- [OSSU: Path to a free self-taught education in Computer Science](https://github.com/ossu/computer-science)
+- [Teach Yourself Computer Science](https://teachyourselfcs.com/)

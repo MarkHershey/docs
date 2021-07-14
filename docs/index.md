@@ -47,6 +47,13 @@
     }
     ```
 
+=== "Rust"
+    ```rust linenums="1"
+    fn main() {
+        println!("Hello World!");
+    }
+    ```
+
 === "Python"
 
     ``` python linenums="1"

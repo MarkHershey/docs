@@ -2,15 +2,16 @@
 
 ## Basic
 
--   `ls -la`
--   `cd`
--   `rm`
--   `cp`
--   `mv`
--   `nano`
--   `touch`
--   `mkdir`
--   `rmdir`
+-   `ls -la` list all with details
+-   `cd` change directory
+-   `rm` remove file(s)
+-   `cp` copy files(s)
+-   `mv` move file(s)
+-   `nano` launch nano text editor
+-   `touch` create a new file
+-   `mkdir` make directory
+-   `rmdir` remove empty directory
+-   `rm -rf` remove all recursively
 
 ### System
 
@@ -30,7 +31,12 @@
 
 ### User & Permission
 
-??? info "List all user"
+!!! info "Create a new user with home directory"
+    ```bash
+    sudo useradd -m username
+    ```
+    
+!!! info "List all users"
     ```bash
     less /etc/passwd
     ```
@@ -39,7 +45,7 @@
     users
     ```
 
-??? info "List all groups"
+!!! info "List all groups"
     ```bash
     less /etc/group
     ```
@@ -48,7 +54,7 @@
     groups
     ```
 
-??? info "List all groups that a specific user belongs to"
+!!! info "List all groups that a specific user belongs to"
     ```bash
     groups USER
     ```
@@ -57,28 +63,28 @@
     id USER
     ```
 
-??? info "List all users in a specific group"
+!!! info "List all users in a specific group"
     ```bash
     getent group GROUP
     ```
 
-??? info "Add user to a group"
+!!! info "Add a user to a group"
     ```bash
     usermod -aG GROUP USER
     ```
     - New group will be one of the user's secondary groups
 
-??? info "Change user's primary group"
+!!! info "Change a user's primary group"
     ```bash
     usermod -g GROUP USER
     ```
 
-??? info "Change current user's password"
+!!! info "Change the current user's password"
     ```bash
     passwd
     ```
 
-??? info "Change other user's password with sudo"
+!!! info "Change a user's password with sudo"
     ```bash
     sudo passwd USER
     ```
@@ -101,12 +107,12 @@
 !!! info ""
     To change directory permissions for everyone, use `u` for users, `g` for group, `o` for others, and `ugo` or `a` for all.
 
-??? info "Change owner for all files inside a folder"
+!!! info "Change owner for all files inside a folder"
     ```bash
     sudo chown USER[:GROUP] FILE(s)
     ```
 
-??? info "Change user permission of a file"
+!!! info "Change user permission of a file"
     ```bash
     chmod NEW_PERMISSIONS FILE
     ```
@@ -181,7 +187,7 @@ cp [current path to file] [new path to file]
 cp example.txt example_copy.txt
 ```
 
-secure copy
+secure copy to remote
 
 ```
 scp [local file] [remote user]@[remote address]:[remote path]
@@ -189,8 +195,13 @@ scp [local file] [remote user]@[remote address]:[remote path]
 scp example.json root@178.128.22.33:/home/root/example
 ```
 
+secure copy from remote
 
+```
+scp [remote user]@[remote address]:[remote file] [local path]
 
+scp root@178.128.22.33:/home/root/example.json .
+```
 
 
 

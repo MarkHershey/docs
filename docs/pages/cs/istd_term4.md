@@ -1,4 +1,4 @@
-# ISTD Term 4
+# ISTD Term 4 (2020 Fall)
 
 - ISTD Core:
     - 50.001 Introduction to Information Systems & Programming

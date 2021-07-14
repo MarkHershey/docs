@@ -1,4 +1,4 @@
-# ISTD Term 5
+# ISTD Term 5 (2021 Spring)
 
 - ISTD Core:
     - 50.003 Elements of Software Construction
