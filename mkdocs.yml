@@ -62,16 +62,18 @@ theme:
       - navigation.expand
     palette:
       - scheme: default
-        primary: black
+        primary: indigo
         accent: pink
         toggle:
-          icon: material/lightbulb-outline
+          icon: material/lightbulb
           name: Switch to darker mode
       - scheme: slate
-        primary: lime
-        accent: indigo
+        # primary: teal
+        primary: deep purple
+        # accent: indigo
+        accent: lime
         toggle:
-          icon: material/lightbulb
+          icon: material/lightbulb-outline
           name: Switch to lighter mode
 
 extra_javascript:

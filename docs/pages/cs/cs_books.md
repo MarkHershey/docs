@@ -21,6 +21,9 @@
     - CLRS might be tedious to read, an alternative is Stanford's [CS 97SI: Introduction to Programming Contests](https://web.stanford.edu/class/cs97si/)
 - :star: Computer Systems: A Programmer's Perspective (**CSAPP**)
     - [[Google Books](https://books.google.com.sg/books/about/Computer_Systems.html?id=YmfjtAEACAAJ&source=kp_book_description&redir_esc=y)]
+- Operating Systems: Three Easy Pieces (**OSTEP**)
+    - Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau
+    - [[OSTEP](https://pages.cs.wisc.edu/~remzi/OSTEP/)]
 - :star: Designing Data-Intensive Applications (**DDIA**)
     - [[Oreilly Learning](https://learning.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)] [[Google Books](https://books.google.com.sg/books/about/Designing_Data_Intensive_Applications.html?id=zFheDgAAQBAJ&source=kp_book_description&redir_esc=y)]
 - Clean Code: A Handbook of Agile Software Craftsmanship
