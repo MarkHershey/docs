@@ -9,7 +9,7 @@
     - [Malaysia](https://en.wikipedia.org/wiki/Malaysia) ([Peninsular Malaysia](https://en.wikipedia.org/wiki/Peninsular_Malaysia))
     - [Cambodia](https://en.wikipedia.org/wiki/Cambodia)
     - [Laos](https://en.wikipedia.org/wiki/Laos)
-- Maritime SEA Countries - Capital City
+- Maritime SEA Countries
     - [Indonesia](https://en.wikipedia.org/wiki/Indonesia)
     - [Philippines](https://en.wikipedia.org/wiki/Philippines)
     - [Malaysia](https://en.wikipedia.org/wiki/Malaysia) ([East Malaysia](https://en.wikipedia.org/wiki/East_Malaysia))
