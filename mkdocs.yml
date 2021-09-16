@@ -113,10 +113,6 @@ nav:
     - Resources:
       - CS Books: 'pages/cs/cs_books.md'
       - CS Online Courses: 'pages/cs/cs_courses.md'
-      - CS Education at SUTD:
-        - ISTD TERM 4: 'pages/cs/istd_term4.md'
-        - ISTD TERM 5: 'pages/cs/istd_term5.md'
-        - ISTD TERM 6: 'pages/cs/istd_term6.md'
       - Tools: 
         - Toolkit: 'pages/tools/toolkit.md'
         - Static Site Generators: 'pages/tools/static_site_generators.md'
@@ -125,3 +121,9 @@ nav:
       - CNN Visualization: 'pages/ml/cnn_visual.md'
     - SUTD:
       - SUTD Bookmarks: 'pages/sutd/bookmarks.md'
+      - CS Education at SUTD:
+        - CSD TERM 4: 'pages/sutd/csd_term4.md'
+        - CSD TERM 5: 'pages/sutd/csd_term5.md'
+        - CSD TERM 6: 'pages/sutd/csd_term6.md'
+    - MISC:
+        - SEA: 'pages/hass/SEA.md'

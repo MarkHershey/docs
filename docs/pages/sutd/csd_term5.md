@@ -1,6 +1,6 @@
-# ISTD Term 5 (2021 Spring)
+# CSD Term 5 (2021 Spring)
 
-- ISTD Core:
+- CSD Core:
     - 50.003 Elements of Software Construction
     - 50.005 Computer System Engineering
     - 50.034 Introduction to Probability and Statistics

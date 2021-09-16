@@ -1,6 +1,6 @@
-# ISTD Term 6 (2021 Fall)
+# CSD Term 6 (2021 Fall)
 
-- ISTD Core:
+- CSD Elective:
     - 50.007 Machine Learning
         - [Lu Wei](https://istd.sutd.edu.sg/people/faculty/lu-wei), [Berrak Sisman](https://istd.sutd.edu.sg/people/faculty/berrak-sisman), [Malika Meghjani](https://istd.sutd.edu.sg/people/faculty/malika-meghjani)
     - 50.012 Networks

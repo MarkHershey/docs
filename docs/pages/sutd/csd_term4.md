@@ -1,6 +1,6 @@
-# ISTD Term 4 (2020 Fall)
+# CSD Term 4 (2020 Fall)
 
-- ISTD Core:
+- CSD Core:
     - 50.001 Introduction to Information Systems & Programming
     - 50.002 Computation Structures
     - 50.004 Introduction to Algorithms
