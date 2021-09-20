@@ -59,7 +59,7 @@ theme:
     features:
       # - navigation.instant
       - navigation.tabs
-      - navigation.expand
+      # - navigation.expand
     palette:
       - scheme: default
         primary: indigo
@@ -92,18 +92,19 @@ nav:
         - VIM: 'pages/dev/vim_ref.md'
         - Tmux: 'pages/dev/tmux_ref.md'
         - Git: 'pages/dev/git.md'
-      - Networking:
+      - Networks:
         - Inter-Process Comms: 'pages/dev/ipc.md'
         - Internet Protocols: 'pages/dev/internet_protocols.md'
         - DNS: 'pages/dev/dns.md'
         - SSH: 'pages/dev/ssh.md'
         - TLS Certificate: 'pages/dev/tls_certificate.md'
         - NPS: 'pages/dev/nps.md'
-      - Linux:
+      - Systems:
         - Linux Commands: 'pages/dev/linux-commands.md'
         - Linux Distros: 'pages/dev/linux-distros.md'
+        - File Systems: 'pages/dev/file_systems.md'
         - Mount G-Drive headlessly : 'pages/dev/linux-mount-gdrive.md'
-      - Languages:
+      - PL:
         - LaTex: 'pages/dev/latex_ref.md'
         - Java:
           - Concurrency: 'pages/lang/java/concurrency.md'
