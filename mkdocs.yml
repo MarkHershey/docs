@@ -119,9 +119,9 @@ nav:
         - Static Site Generators: 'pages/tools/static_site_generators.md'
         - MkDocs Material: 'pages/tools/mkdocs_demo.md'
     - ML:
+      - Types of Machine Learning: 'pages/ml/types_of_ml.md'
       - CNN Visualization: 'pages/ml/cnn_visuals.md'
       - SVM: 'pages/ml/SVM.md'
-      - ML Types: 'pages/ml/types_of_ml.md'
     - SUTD:
       - SUTD Bookmarks: 'pages/sutd/bookmarks.md'
       - CS Education at SUTD:
