@@ -14,7 +14,7 @@ Query full status log
 nvidia-smi -q
 ```
 
-Query CLOCK-related status
+Query all Clock-related status
 
 ```bash
 nvidia-smi -q -d CLOCK
@@ -23,14 +23,16 @@ nvidia-smi -q -d CLOCK
 ## Set GPU Clock Speed
 
 Set lower and upper bound for NVIDIA GPU Clock
-- `-lgc` for lock gpu clocks
+
+- `-lgc` stands for lock gpu clocks
 
 ```bash
 sudo nvidia-smi -lgc 200,1200
 ```
 
-Reset NVIDIA GPU Clock
-- `-rgc` for reset gpu clocks
+Reset NVIDIA GPU Clock to default value
+
+- `-rgc` stands for reset gpu clocks
 
 ```bash
 sudo nvidia-smi -rgc
@@ -38,7 +40,10 @@ sudo nvidia-smi -rgc
 
 ## Set Power Limits
 
-Specifies maximum power limit (pl) in watts
+Specifies maximum power that the GPU can draw
+
+- `pl` stands for power limit 
+- Unit: Watts
 
 ```bash
 sudo nvidia-smi -pl 120
@@ -46,13 +51,34 @@ sudo nvidia-smi -pl 120
 
 ## Specific Queries
 
+Example: 
+
+To query specific information such as:
+
+- index
+- gpu_name
+- utilization.gpu
+- temperature.gpu
+- memory.total
+- memory.used
+- memory.free
+
+You may execute the following command:
+
 ```bash
 nvidia-smi --query-gpu=index,gpu_name,utilization.gpu,temperature.gpu,memory.total,memory.used,memory.free --format=csv
 ```
 
-## Install & Use `nvtop`
+- The list of valid properties can be obtained using `nvidia-smi --help-query-gpu`
+- The argument `--format=csv` is always required.
 
-- NVIDIA GPU monitoring tool [nvtop](https://github.com/Syllo/nvtop)
+
+## NVIDIA GPU Monitoring Tools
+
+- [**nvtop**](https://github.com/Syllo/nvtop)
+- [**nvitop**](https://github.com/XuehaiPan/nvitop)
+
+### Install & Use `nvtop`
 
 Install
 
