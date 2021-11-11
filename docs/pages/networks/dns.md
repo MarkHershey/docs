@@ -2,7 +2,7 @@
 
 ## What is DNS?
 
-!!! tldr "ELI5"
+!!! tldr "Explain like I'm 5"
 
     DNS Server is like a public phonebook for the Internet, whenever you type an URL, `www.google.com` for example, into your browser and hit enter, your browser needs to fetch website content from Google's server, but your browser does not know the actual IP address of Google's server yet. 
 
