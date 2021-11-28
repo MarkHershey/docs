@@ -133,7 +133,7 @@
 - Telegram Channel (ROOT): [ROOT Announcements](https://t.me/SUTDROOTAnnouncements)
 - Facebook Group: [SUTD Family](https://www.facebook.com/groups/522995557746987)
 - Facebook Page: [A Better World By Memes](https://www.facebook.com/SUTDmemes/)
-- Instagram (meme): [@changicollege](https://www.instagram.com/changicollege)
+- Instagram (meme): [@changicollege](https://www.instagram.com/changicollege/)
 - Reddit: [r/sutd](https://www.reddit.com/r/sutd/)
 - Discord: [/r/sutd](https://discord.com/invite/gp6Yd3F)
 - Discourse forum: [SUTDiscourse](https://sutdiscourse.org/login)
