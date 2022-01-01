@@ -92,6 +92,7 @@ nav:
         - VIM: 'pages/dev/vim_ref.md'
         - Tmux: 'pages/dev/tmux_ref.md'
         - Git: 'pages/dev/git.md'
+        - GPG: 'pages/dev/gpg.md'
       - Networks:
         - Internet Protocols: 'pages/networks/internet_protocols.md'
         - Network Layer: 'pages/networks/network_layer.md'
