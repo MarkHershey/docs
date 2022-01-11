@@ -2,9 +2,9 @@
 
 !!! tldr ""
 
-    **Hey there** :fontawesome-regular-laugh-wink:
+    **Hey there** :fontawesome-solid-ghost:
 
-    This is just an insignificant documentation space for personal reference.
+    This is just a documentation space for personal reference.
 
     ---
 
