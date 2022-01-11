@@ -31,67 +31,71 @@
 
 ### User & Permission
 
-!!! info "Create a new user with home directory"
-    ```bash
-    sudo useradd -m username
-    ```
+Create a new user with home directory
+
+```bash
+sudo useradd -m username
+```
     
-!!! info "List all users"
-    ```bash
-    less /etc/passwd
-    ```
-    or
-    ```bash
-    users
-    ```
+List all users
 
-!!! info "List all groups"
-    ```bash
-    less /etc/group
-    ```
-    or
-    ```bash
-    groups
-    ```
+```bash
+less /etc/passwd
+# or
+users
+```
 
-!!! info "List all groups that a specific user belongs to"
-    ```bash
-    groups USER
-    ```
-    or
-    ```bash
-    id USER
-    ```
+List all groups
 
-!!! info "List all users in a specific group"
-    ```bash
-    getent group GROUP
-    ```
+```bash
+less /etc/group
+# or
+groups
+```
 
-!!! info "Add a user to a group"
-    ```bash
-    usermod -aG GROUP USER
-    ```
-    - New group will be one of the user's secondary groups
+List all groups that a specific user belongs to
 
-!!! info "Change a user's primary group"
-    ```bash
-    usermod -g GROUP USER
-    ```
+```bash
+groups USER
+# or
+id USER
+```
 
-!!! info "Change the current user's password"
-    ```bash
-    passwd
-    ```
+List all users in a specific group
 
-!!! info "Change a user's password with sudo"
-    ```bash
-    sudo passwd USER
-    ```
+```bash
+getent group GROUP
+```
+
+Add a user to a group
+
+```bash
+usermod -aG GROUP USER
+```
+
+- New group will be one of the user's secondary groups
+
+Change a user's primary group
+
+```bash
+usermod -g GROUP USER
+```
+
+Change the current user's password
+
+```bash
+passwd
+```
+
+Change any user's password with sudo privileges
+
+```bash
+sudo passwd USER
+```
 
 ## File Permissions
 
-!!! info "*NIX System Permissions"
+!!! info "UNIX System Permissions"
     Example:
     ```
     drwx------   5 markhuang  staff   160B Jan 13 11:13 .ssh
@@ -104,26 +108,44 @@
     - following 3 chars: `r`/`-` + `w`/`-` + `x`/`-` represent `Read`,`Write`,`Execute` permission for **owner group**.
     - following 3 chars: `r`/`-` + `w`/`-` + `x`/`-` represent `Read`,`Write`,`Execute` permission for **other user**.
 
+
+Change owner for all files inside a folder
+
+```bash
+sudo chown USER[:GROUP] FILE(s)
+
+# e.g. Change the owner and group of example.txt to user jack and group jack
+sudo chown jack:jack example.txt
+```
+
+Change user permission of a file
+
+```bash
+chmod NEW_PERMISSIONS FILE
+
+# e.g. Add execution permission for owner to example.sh
+chmod u+x example.sh
+# e.g. Add execution permission for owner and group to example.sh
+chmod ug+x example.sh
+# e.g. Remove execution permission for everyone to example.sh
+chmod a-x example.sh
+# e.g. Add read permission for everyone to example.sh
+chmod a+r example.sh
+# e.g. Change the permissions of example.sh to `rwxrwxrwx`
+chmod 777 example.sh
+```
+
 !!! info ""
-    To change directory permissions for everyone, use `u` for users, `g` for group, `o` for others, and `ugo` or `a` for all.
+    - `u`: permission for owner user
+    - `g`: permission for owner group
+    - `o`: permission for other user
+    - `a`: permission for all
+    - `ugo`: permission for all
+    - `+`: add permission
+    - `-`: remove permission
+    - `777`: permission equivalent to `rwxrwxrwx`
+    - `644`: permission equivalent to `rw-r--r--`
 
-!!! info "Change owner for all files inside a folder"
-    ```bash
-    sudo chown USER[:GROUP] FILE(s)
-    ```
-
-!!! info "Change user permission of a file"
-    ```bash
-    chmod NEW_PERMISSIONS FILE
-    ```
-
-??? Examples
-    ```bash
-    chmod u+x example.sh
-    chmod ug+r example.sh
-    chmod ug-w example.sh
-    chmod a+rwx example.sh
-    ```
 
 ### Disk
 
@@ -135,6 +157,12 @@ df -h
 
 - `-h` for "Human-readable" output
 
+```
+df -x tmpfs -x squashfs -x devtmpfs -x vfat -hT
+```
+
+- `-x` or `--exclude-type` for excluding certain file systems Type
+- `-T` for printing file system type
 
 #### Check file/folder size
 
@@ -187,7 +215,12 @@ cp [current path to file] [new path to file]
 cp example.txt example_copy.txt
 ```
 
-secure copy to remote
+### Copy files between machines
+
+!!! info ""
+    `scp` also supports autocompletion for remote files and directories if you have existing SSH connection to the remote machine.
+
+secure copy to remote machine
 
 ```
 scp [local file] [remote user]@[remote address]:[remote path]
@@ -195,7 +228,7 @@ scp [local file] [remote user]@[remote address]:[remote path]
 scp example.json root@178.128.22.33:/home/root/example
 ```
 
-secure copy from remote
+secure copy from remote machine
 
 ```
 scp [remote user]@[remote address]:[remote file] [local path]
