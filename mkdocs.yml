@@ -9,7 +9,7 @@ docs_dir: docs/
 # repo_url: 'https://github.com/MarkHershey/docs'
 
 # Copyright Declaration (shown at the end of the page)
-copyright: "Mark Huang &copy; 2019-2021. All Rights Reserved."
+copyright: "Mark Huang &copy; 2019-2022. All Rights Reserved."
 
 # Footer Customization
 extra:
@@ -32,11 +32,12 @@ markdown_extensions:
     - pymdownx.mark # highlighting of text
     - pymdownx.tilde # strikethrough of text
     - pymdownx.keys # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#keys
-    - pymdownx.tabbed # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#tabbed
     - pymdownx.details # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#details
     - pymdownx.highlight # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-blocks
-    - pymdownx.superfences # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#superfences
     - pymdownx.smartsymbols # supporting special characters like copyright symbol (c)
+    - pymdownx.superfences # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#superfences
+    - pymdownx.tabbed: # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#tabbed
+        alternate_style: true 
     - pymdownx.arithmatex: # https://squidfunk.github.io/mkdocs-material/reference/mathjax/#arithmatex
         generic: true
     - pymdownx.emoji: # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#emoji
