@@ -103,6 +103,7 @@ nav:
         - Inter-Process Comms: 'pages/networks/ipc.md'
         - TLS Certificate: 'pages/networks/tls_certificate.md'
         - NPS: 'pages/networks/nps.md'
+        - NGINX: 'pages/networks/nginx.md'
       - Systems:
         - Linux Commands: 'pages/dev/linux-commands.md'
         - Linux Distros: 'pages/dev/linux-distros.md'

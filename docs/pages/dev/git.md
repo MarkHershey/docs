@@ -216,15 +216,28 @@ Reference: [Atlassian - Undoing Commits & Changes](https://www.atlassian.com/git
 
 ---
 
+## Frequently Encountered Scenarios
+
 #### How to fetch a remote branch other than the default branch?
 
 ```bash
-git checkout --track origin/branch-name
+git checkout --track origin/branch_name
 ```
 
 1. This will fetch the remote branch to local.
 2. Auto set up to track remote branch.
 3. Auto switch to the branch.
+
+#### How to use remote to overwrite local completely?
+
+!!! warning
+    You will lose all local changes and local commits.
+
+
+
+```bash
+git fetch --all && git reset --hard origin/branch_name
+```
 
 ---
 

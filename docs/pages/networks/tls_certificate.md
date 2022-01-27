@@ -30,6 +30,13 @@ When the signed certificate is presented to a third party (such as when that per
 
 ---
 
+### Get TLS Certificate for server
+
+- [certbot](https://certbot.eff.org/)
+- [Let's Encrypt](https://letsencrypt.org/)
+
+---
+
 Ref:
 
 - [What Is a Certificate Authority (CA)?](https://www.ssl.com/faqs/what-is-a-certificate-authority/#:~:text=A%20certificate%20authority%20(CA)%2C,the%20issuance%20of%20electronic%20documents)
