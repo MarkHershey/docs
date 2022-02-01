@@ -60,7 +60,7 @@ theme:
     features:
       # - navigation.instant
       - navigation.tabs
-      # - navigation.expand
+      - navigation.expand
     palette:
       - scheme: default
         primary: indigo
@@ -110,6 +110,8 @@ nav:
         - File Systems: 'pages/dev/file_systems.md'
         - Mount G-Drive headlessly : 'pages/dev/linux-mount-gdrive.md'
       - PL:
+        - Python:
+          - Subprocess Call: 'pages/python/subprocess_call.md'
         - LaTex: 'pages/dev/latex_ref.md'
         - Java:
           - Concurrency: 'pages/lang/java/concurrency.md'
