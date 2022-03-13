@@ -129,6 +129,8 @@ nav:
                 - Blogs: "pages/ml/blogs.md"
                 - SVM: "pages/ml/SVM.md"
                 - KL Divergence vs Cross Entropy: "pages/ml/kl.md"
+                - Norm: "pages/math/norm.md"
+                - Regularization: "pages/ml/regularization.md"
           - CV:
                 - CNN Visualization: "pages/ml/cnn_visuals.md"
           - NLP:
