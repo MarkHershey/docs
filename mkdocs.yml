@@ -16,7 +16,7 @@ extra:
     social:
         - icon: fontawesome/brands/github
           link: https://github.com/MarkHershey
-        - icon: fontawesome/solid/home
+        - icon: fontawesome/solid/house
           link: https://markhh.com/
     analytics:
         provider: google
