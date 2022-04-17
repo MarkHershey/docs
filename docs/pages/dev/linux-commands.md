@@ -170,6 +170,10 @@ df -x tmpfs -x squashfs -x devtmpfs -x vfat -hT
 du -sh {dir}
 ```
 
+```
+du -sh ./*
+```
+
 - `-s` for "specified" file/dir only
 - `-h` for "Human-readable" output
 
@@ -235,6 +239,12 @@ scp [remote user]@[remote address]:[remote file] [local path]
 
 scp root@178.128.22.33:/home/root/example.json .
 ```
+
+When copying a good number of files
+
+- Consider using a simpler encryption algorithm
+- Consider using `rsync` instead of `scp`
+- Consider using `parallel-scp` and `parallel-rsync`?
 
 
 

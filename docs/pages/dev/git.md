@@ -197,6 +197,7 @@ Reference: [Atlassian - Undoing Commits & Changes](https://www.atlassian.com/git
 - `git reset` / `git reset HEAD` un-stage everything; move everything out from staging area.
 - `git reset --hard` / `git reset --hard HEAD`discard any not yet committed changes, which includes changes in staging area and changes not yet staged. Un-tracked changes will be ignored.
 - `git reset <COMMIT HASH>` goes back in time! It rolls back to the particular commit, discard any commits after that point. Un-tracked changes will be ignored. This method of undoing changes has the cleanest effect on history, but a portion of commit histories are wiped, hence, use with cautious and only use when necessary.
+- `git reset HEAD~` undo the last local commit.
 
 #### `git revert`
 
@@ -228,11 +229,21 @@ git checkout --track origin/branch_name
 2. Auto set up to track remote branch.
 3. Auto switch to the branch.
 
+
+#### How to push a new local branch to the remote?
+
+assume you are on the new local branch
+
+```bash
+git push -u origin branch_name
+```
+
+- the `branch_name` here is the name of the remote branch you are creating.
+
 #### How to use remote to overwrite local completely?
 
 !!! warning
     You will lose all local changes and local commits.
-
 
 
 ```bash
