@@ -91,6 +91,7 @@ nav:
                 - VIM: "pages/dev/vim_ref.md"
                 - Tmux: "pages/dev/tmux_ref.md"
                 - Git: "pages/dev/git.md"
+                - GitHub: "pages/dev/github.md"
                 - GPG: "pages/dev/gpg.md"
           - Networks:
                 - Internet Protocols: "pages/networks/internet_protocols.md"
