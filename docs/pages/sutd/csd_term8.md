@@ -3,8 +3,9 @@
 - CSD Elective:
     - 50.017 Graphics and Visualisation
         - [Peng Song](https://istd.sutd.edu.sg/people/faculty/peng-song)
-    - 50.045 Information Retrieval
-        - [Soujanya Poria](https://istd.sutd.edu.sg/people/faculty/soujanya-poria)
+    - 50.021 Artificial Intelligence
+        - [Dorien Herremans](https://istd.sutd.edu.sg/people/faculty/dorien-herremans)
+        - [Kwan Hui Lim](https://istd.sutd.edu.sg/people/faculty/kwan-hui-lim)
 - Final Year Project:
     - 01.401 Capstone 2
         - [Bige Tunçer](https://asd.sutd.edu.sg/people/faculty/bige-tuncer)
