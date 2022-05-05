@@ -6,7 +6,7 @@
     - 50.045 Information Retrieval
         - [Soujanya Poria](https://istd.sutd.edu.sg/people/faculty/soujanya-poria)
 - Final Year Project:
-    - Capstone 2
+    - 01.401 Capstone 2
         - [Bige Tunçer](https://asd.sutd.edu.sg/people/faculty/bige-tuncer)
         - [Luciënne T.M. Blessing](https://epd.sutd.edu.sg/people/faculty/lucienne-blessing)
 - HASS Elective:
