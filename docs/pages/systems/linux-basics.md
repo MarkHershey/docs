@@ -1,35 +1,47 @@
-# Linux Commands
+# Linux Command-line Basics
 
-## Basic
+## Basics of Basics
 
--   `ls -la` list all with details
--   `cd` change directory
--   `rm` remove file(s)
+### Navigate around the file system
+
+- `ls` list files
+- `ls -l` list files with details
+- `ls -la` list all files with details including hidden files
+- `cd` change directory
+- `cd ..` move out / up current directory by one layer
+- `cd ~` change to home Directory
+- `pwd` print current working directory
+
+### Create/Modify files and folders
+
+-   `touch <filename>` create a new file
+-   `mkdir <dirname>` make a new directory (folder)
+-   `rm <filename(s)>` remove file(s)
+-   `rmdir <dirname(s)>` remove empty directory(s)
+-   `rm -rf <dirname(s)>` remove directory(s) recursively
 -   `cp` copy files(s)
--   `mv` move file(s)
--   `nano` launch nano text editor
--   `touch` create a new file
--   `mkdir` make directory
--   `rmdir` remove empty directory
--   `rm -rf` remove all recursively
+-   `mv <filename> <new filename>` rename a file
+-   `mv <filename(s)> <target path>` move file(s) to target path
+-   `nano <filename>` launch nano text editor to edit file content
 
-### System
+### Check system information
 
-- `sudo apt update` check for updates
-- `sudo apt upgrade` actually download and install updates
 - `lsb_release -a` check ubuntu version
 - `echo` print function
 - `sudo reboot` reboot
 - `sudo shutdown -h now` shutdown now
 - `ifconfig`
 - `iwconfig`
-- `ping <domain name | ip address>`
+- `ping <domain name or ip address>`
 - `top` show processes; use `q` to quit
 - `uname -a` check machine info
 - `lsusb` list usb
 - `lspci` list pci
 
-### User & Permission
+
+## User & Permissions
+
+### User and groups 
 
 Create a new user with home directory
 
@@ -81,6 +93,8 @@ Change a user's primary group
 usermod -g GROUP USER
 ```
 
+### User password
+
 Change the current user's password
 
 ```bash
@@ -93,7 +107,15 @@ Change any user's password with sudo privileges
 sudo passwd USER
 ```
 
-## File Permissions
+### Switch user
+
+- `sudo -i` becoming root user (require current user password)
+- `su -` become root user (require root password)
+- `su [username]` switch to user
+
+> Ref: [Difference between sudo -i and su -](https://unix.stackexchange.com/a/98534)
+
+### File Permissions
 
 !!! info "UNIX System Permissions"
     Example:
@@ -147,7 +169,7 @@ chmod 777 example.sh
     - `644`: permission equivalent to `rw-r--r--`
 
 
-### Disk
+## Disk
 
 #### Check disk utilization 
 
@@ -180,17 +202,9 @@ du -sh ./*
 - `-s` for "specified" file/dir only
 - `-h` for "Human-readable" output
 
-### Navigate Around File System
 
-- `ls` list files
-- `ls -l` list files with details
-- `ls -la` list all files with details including hidden files
-- `cd` change directory
-- `cd ..` move out / up current directory by one layer
-- `cd ~` change to home Directory
-- `pwd` print working directory
 
-### Working with Files and Folders
+## Working with Files and Folders
 
 - `mkdir new_folder_name` make directory (create a new folder)
 - `rmdir some_folder` remove a empty folder
@@ -247,14 +261,4 @@ When copying a good number of files
 
 - Consider using a simpler encryption algorithm
 - Consider using `rsync` instead of `scp`
-- Consider using `parallel-scp` and `parallel-rsync`?
-
-
-
-### Switch User
-
-- `sudo -i` becoming root user (require current user password)
-- `su -` become root user (require root password)
-- `su [username]` switch to user
-
-> Ref: [Difference between sudo -i and su -](https://unix.stackexchange.com/a/98534)
+- Consider using `parallel-scp` and `parallel-rsync`

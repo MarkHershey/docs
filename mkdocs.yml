@@ -104,10 +104,10 @@ nav:
                 - NPS: "pages/networks/nps.md"
                 - NGINX: "pages/networks/nginx.md"
           - Systems:
-                - Linux Commands: "pages/dev/linux-commands.md"
-                - Linux Distros: "pages/dev/linux-distros.md"
-                - File Systems: "pages/dev/file_systems.md"
-                - Mount G-Drive headlessly: "pages/dev/linux-mount-gdrive.md"
+                - Linux Basics: "pages/systems/linux-basics.md"
+                - Linux Distros: "pages/systems/linux-distros.md"
+                - File Systems: "pages/systems/file_systems.md"
+                - Mount G-Drive headlessly: "pages/systems/linux-mount-gdrive.md"
           - PL:
                 - Python:
                       - Subprocess Call: "pages/python/subprocess_call.md"
