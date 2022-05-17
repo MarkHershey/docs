@@ -151,13 +151,15 @@ chmod 777 example.sh
 
 #### Check disk utilization 
 
-```
+```bash
 df -h
 ```
 
 - `-h` for "Human-readable" output
 
-```
+Example:
+
+```bash
 df -x tmpfs -x squashfs -x devtmpfs -x vfat -hT
 ```
 
@@ -166,11 +168,12 @@ df -x tmpfs -x squashfs -x devtmpfs -x vfat -hT
 
 #### Check file/folder size
 
-```
+```bash
 du -sh {dir}
 ```
+Example:
 
-```
+```bash
 du -sh ./*
 ```
 
@@ -250,5 +253,8 @@ When copying a good number of files
 
 ### Switch User
 
-- `su -` switch to root user
-- `su [username]` switch back to yourself
+- `sudo -i` becoming root user (require current user password)
+- `su -` become root user (require root password)
+- `su [username]` switch to user
+
+> Ref: [Difference between sudo -i and su -](https://unix.stackexchange.com/a/98534)
