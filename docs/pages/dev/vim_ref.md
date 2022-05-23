@@ -42,10 +42,10 @@ refer to chunks of text.
 
 - Basic movement: `h` `j` `k` `l` (left, down, up, right)
 - Words: `w` (next word), `b` (beginning of word), `e` (end of word)
-- Lines: `0` (beginning of line), `^` (first non-blank character), `$` (end of line)
-- Screen: `H` (top of screen), `M` (middle of screen), `L` (bottom of screen)
+- Lines: `0` (start of line), `^` (first non-whitespace), `$` (end of line)
+- Screen: `H` (Top of screen), `M` (Middle of screen), `L` (Lower/bottom of screen)
 - Scroll: `Ctrl-u` (up), `Ctrl-d` (down)
-- File: `gg` (beginning of file), `G` (end of file)
+- File: `gg` (start of file), `G` (end of file)
 - Line numbers: `:{number}<CR>` or `{number}G` (line {number})
 - Misc: `%` (corresponding item)
 - Find: `f{character}`, `t{character}`, `F{character}`, `T{character}`
@@ -98,4 +98,8 @@ which means "inner" or "inside", and `a`, which means "around".
 - `da'` delete a single-quoted string, including the surrounding single quotes
 
 
-> Forked from [The Missing Semester from MIT](https://github.com/missing-semester/missing-semester/blob/master/_2020/editors.md)
+## References
+
+- [The Missing Semester from MIT](https://github.com/missing-semester/missing-semester/blob/master/_2020/editors.md)
+- [Vim Cheat Sheet by Michael](http://michael.peopleofhonoronly.com/vim/)
+- [Beautiful Vim Cheat Sheet](https://vimcheatsheet.com/)
