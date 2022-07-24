@@ -137,6 +137,7 @@ nav:
           - NLP:
                 - Word Embedding: "pages/ml/word_embedding.md"
           - Code:
+                - Efficient Training: "pages/ml/efficient_training.md"
                 - Matrix Ops - NumPy vs PyTorch: "pages/ml/numpy_torch_ops.md"
     - SUTD:
           - SUTD Bookmarks: "pages/sutd/bookmarks.md"
