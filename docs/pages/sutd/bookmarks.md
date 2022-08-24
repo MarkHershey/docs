@@ -1,5 +1,8 @@
 # SUTD Bookmarks
 
+!!! note ""
+    Last Updated: `24 Aug 2022`
+
 ## Campus Internet Access
 
 !!! info ""
@@ -26,6 +29,7 @@
 - [SUTD FAB Lab Booking System](https://edbooking.sutd.edu.sg/fablabbooking/Web/)
 - [SUTD ED Booking Systems (incl. Fab Lab, Academic Media Studio, STEM Lab, Clean Room)](https://edbooking.sutd.edu.sg/edsystems/)
 - [SUTD Facility Booking System](https://usermgmtsys.sutd.edu.sg/login)
+- [SUTD Research Seating Management System](https://rsms.sutd.edu.sg/)
 
 ---
 
@@ -45,10 +49,13 @@
 
 - [SUTD - EASE](https://ease.sutd.edu.sg/app/UserHome)
 - [SUTD - VPN](https://sutdvpn.sutd.edu.sg/remote)
+
+    !!! info ""
+        VPN Setup Guide: [[PDF]](../assets/Guide-to-login-to-SUTD-VPN_v1.0.pdf)
+
 - [SUTD - Download (New) (via sharepoint)](https://sutdapac-my.sharepoint.com/:f:/g/personal/sysop_sutd_edu_sg/EiRx2NWoIuFJoOL_9s1CfRAB3rFNfl5-2VSl_A4XwUa7lg)
 
     !!! info ""
-        - Require SUTD office 365 logged in
         - Old Download site (now suspended): [https://downloads.sutd.edu.sg](https://downloads.sutd.edu.sg/cgi-bin/)
 
 - [SUTD - IT Service Desk](http://itservicedesk.sutd.edu.sg/)
