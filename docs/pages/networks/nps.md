@@ -6,33 +6,59 @@
 
 ## Setup Server (Public Cloud) Side
 
-Download
+**Download**
 
 for AMD64 Ubuntu Server
 ```bash
-wget https://github.com/ehang-io/nps/releases/download/v0.26.9/linux_amd64_server.tar.gz
+wget https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_amd64_server.tar.gz
 ```
 
-Extract
+**Extract**
 ```bash
 tar -xvf linux_amd64_server.tar.gz
 ```
 
-Install
+**Install**
 ```bash
 sudo ./nps install
 ```
 
-Configure after installation
+**Configure**
+
+- Replace default `web_username` and `web_password`
+
 ```bash
 nano /etc/nps/conf/nps.conf
 ```
 
-Visit Web Dashboard at `xxx.xxx.xxx.xxx:8080`
+**Allow UFW**
+
+```bash
+sudo ufw allow 8080,8024
+sudo ufw show added
+sudo ufw enable
+```
+
+**Start NPS Server**
+
+```bash
+nps start # start nps server
+nps restart # restart nps server
+nps stop # stop nps server
+nps reload # reload config file
+```
+
+**Visit Web Dashboard** at `xxx.xxx.xxx.xxx:8080`
+
 - default user `admin`
 - default pass `123`
 
-Create Client Record
+**Create Client Record**
+
+- Give it a name
+- `Unique verify Key` is the `vkey` we will be using from the client side, you can let it generate automatically or specify your own.
+- Confirm
+
 
 ## Setup Client (Private Target) Side
 
@@ -40,7 +66,12 @@ Create Client Record
 
 for AMD64 Ubuntu Client
 ```bash
-wget https://github.com/ehang-io/nps/releases/download/v0.26.9/linux_amd64_client.tar.gz
+wget https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_amd64_client.tar.gz
+```
+
+**Extract**
+```bash
+tar -xvf linux_amd64_client.tar.gz
 ```
 
 **Register to system**
