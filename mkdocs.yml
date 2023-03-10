@@ -106,6 +106,7 @@ nav:
           - Systems:
                 - Linux Basics: "pages/systems/linux-basics.md"
                 - Linux Distros: "pages/systems/linux-distros.md"
+                - Change Hostname in Linux: "pages/systems/linux-change-hostname.md"
                 - File Systems: "pages/systems/file_systems.md"
                 - Mount G-Drive headlessly: "pages/systems/linux-mount-gdrive.md"
           - PL:
