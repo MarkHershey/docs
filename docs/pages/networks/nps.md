@@ -62,39 +62,18 @@ nps reload # reload config file
 
 ## Setup Client (Private Target) Side
 
-**Download**
+Use my convenient [script](https://github.com/MarkHershey/nps-install) to install or uninstall NPS client on your target machine.
 
-for AMD64 Ubuntu Client
+Clone the script
+
 ```bash
-wget https://github.com/ehang-io/nps/releases/download/v0.26.10/linux_amd64_client.tar.gz
+git clone https://github.com/MarkHershey/nps-install.git
 ```
 
-**Extract**
+Run the script 
+
 ```bash
-tar -xvf linux_amd64_client.tar.gz
+cd nps-install
+python3 client_install.py -s SERVER_IP_ADDRESS -p SERVER_PORT -v CLIENT_VKEY
 ```
 
-**Register to system**
-```bash
-sudo ./npc install -server=xxx.xxx.xxx.xxx:8024 -vkey=xxx
-```
-
-**Startup**
-```bash
-sudo npc start
-```
-
-**Stop**
-```bash
-sudo npc stop
-```
-
-**Deregister**
-```bash
-./npc uninstall
-```
-
-**Update**
-```bash
-sudo npc stop && sudo npc-update update
-```
