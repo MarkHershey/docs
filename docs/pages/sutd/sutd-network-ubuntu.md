@@ -2,20 +2,18 @@
 
 Contents:
 
-0. Essential Information
-1. Connect to SUTD Network on Ubuntu via Graphical User Interface (GUI)
-    1.1 Wired Connection
-    1.2 Wireless Connection (SUTD_Wifi)
+1. Essential Information
 2. Connect to SUTD Network on Ubuntu via Command Line Interface (CLI)
-    2.1 Wired Connection
-    2.2 Wireless Connection (SUTD_Wifi)
-
-
-## 0. Essential Information
+    1. Wired Connection
+    2. Wireless Connection (SUTD_Wifi)
 
 
 
+## 1. Essential Information
 
+
+
+## 2.1 Connect to Wired SUTD Network on Ubuntu via CLI
 
 
 ### Resulting Network Configuration
@@ -54,3 +52,6 @@ method=auto
 
 [proxy]
 ```
+
+
+## 2.2 Connect to Wireless SUTD Network (SUTD_Wifi) on Ubuntu via CLI
