@@ -105,6 +105,7 @@ nav:
                 - NGINX: "pages/networks/nginx.md"
           - Systems:
                 - Linux Basics: "pages/systems/linux-basics.md"
+                - Linux Users & Groups: "pages/systems/linux-users-and-groups.md"
                 - Linux Distros: "pages/systems/linux-distros.md"
                 - Change Hostname in Linux: "pages/systems/linux-change-hostname.md"
                 - File Systems: "pages/systems/file-systems.md"
