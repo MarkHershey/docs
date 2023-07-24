@@ -110,6 +110,7 @@ nav:
                 - Linux Disk Mounting: "pages/systems/linux-disk-mounting.md"
                 - Linux Distros: "pages/systems/linux-distros.md"
                 - Linux Hostname: "pages/systems/linux-change-hostname.md"
+                - System Status OneLiners: "pages/systems/system-status.md"
                 - File Systems: "pages/systems/file-systems.md"
                 - Mount G-Drive headlessly: "pages/systems/linux-mount-gdrive.md"
           - PL:
