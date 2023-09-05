@@ -9,7 +9,7 @@ docs_dir: docs/
 # repo_url: 'https://github.com/MarkHershey/docs'
 
 # Copyright Declaration (shown at the end of the page)
-copyright: "Mark Huang &copy; 2019-2022. All Rights Reserved."
+copyright: "Mark Huang &copy; 2019-2023. All Rights Reserved."
 
 # Footer Customization
 extra:
@@ -85,7 +85,7 @@ nav:
     - Home: "index.md"
     - Projects:
           - Dotfiles: "pages/project/dotfiles.md"
-    - Dev References:
+    - Dev Refs:
           - Dev Tools:
                 - Docker: "pages/dev/docker.md"
                 - VIM: "pages/dev/vim_ref.md"
@@ -103,25 +103,26 @@ nav:
                 - TLS Certificate: "pages/networks/tls_certificate.md"
                 - NPS: "pages/networks/nps.md"
                 - NGINX: "pages/networks/nginx.md"
-          - Systems:
-                - Linux Basics: "pages/systems/linux-basics.md"
-                - Linux Users & Groups: "pages/systems/linux-users-and-groups.md"
-                - Linux GUI/CLI Switch: "pages/systems/linux-gui-cli.md"
-                - Linux Disk Mounting: "pages/systems/linux-disk-mounting.md"
-                - Linux Distros: "pages/systems/linux-distros.md"
-                - Linux Hostname: "pages/systems/linux-change-hostname.md"
-                - System Status OneLiners: "pages/systems/system-status.md"
-                - File Systems: "pages/systems/file-systems.md"
-                - Mount G-Drive headlessly: "pages/systems/linux-mount-gdrive.md"
           - PL:
                 - Python:
                       - Subprocess Call: "pages/python/subprocess_call.md"
                 - LaTex: "pages/dev/latex_ref.md"
                 - Java:
                       - Concurrency: "pages/lang/java/concurrency.md"
-          - NVIDIA:
-                - Install Driver on Ubuntu: "pages/dev/nvidia_driver.md"
-                - NVIDIA-SMI Commands: "pages/dev/nvidia-smi.md"
+    - Linux:
+      - Linux Basics: "pages/systems/linux-basics.md"
+      - Linux Users & Groups: "pages/systems/linux-users-and-groups.md"
+      - Linux GUI/CLI Switch: "pages/systems/linux-gui-cli.md"
+      - Linux Disk Mounting: "pages/systems/linux-disk-mounting.md"
+      - Linux Distros: "pages/systems/linux-distros.md"
+      - Linux Hostname: "pages/systems/linux-change-hostname.md"
+      - System Status OneLiners: "pages/systems/system-status.md"
+      - File Systems: "pages/systems/file-systems.md"
+      - File Transfer Tips: "pages/systems/file-transfer.md"
+      - Mount G-Drive headlessly: "pages/systems/linux-mount-gdrive.md"
+      - NVIDIA:
+            - Install Driver on Ubuntu: "pages/dev/nvidia_driver.md"
+            - NVIDIA-SMI Commands: "pages/dev/nvidia-smi.md"
     - Resources:
           - CS Books: "pages/cs/cs_books.md"
           - CS Online Courses: "pages/cs/cs_courses.md"
@@ -129,28 +130,28 @@ nav:
                 - Toolkit: "pages/tools/toolkit.md"
                 - Static Site Generators: "pages/tools/static_site_generators.md"
                 - MkDocs Material: "pages/tools/mkdocs_demo.md"
-    - ML:
-          - General:
-                - Types of Machine Learning: "pages/ml/types_of_ml.md"
-                - Blogs: "pages/ml/blogs.md"
-                - SVM: "pages/ml/SVM.md"
-                - KL Divergence vs Cross Entropy: "pages/ml/kl.md"
-                - Norm: "pages/math/norm.md"
-                - Regularization: "pages/ml/regularization.md"
-          - CV:
-                - CNN Visualization: "pages/ml/cnn_visuals.md"
-          - NLP:
-                - Word Embedding: "pages/ml/word_embedding.md"
-          - Code:
-                - Efficient Training: "pages/ml/efficient_training.md"
-                - Matrix Ops - NumPy vs PyTorch: "pages/ml/numpy_torch_ops.md"
+#     - ML:
+#           - General:
+#                 - Types of Machine Learning: "pages/ml/types_of_ml.md"
+#                 - Blogs: "pages/ml/blogs.md"
+#                 - SVM: "pages/ml/SVM.md"
+#                 - KL Divergence vs Cross Entropy: "pages/ml/kl.md"
+#                 - Norm: "pages/math/norm.md"
+#                 - Regularization: "pages/ml/regularization.md"
+#           - CV:
+#                 - CNN Visualization: "pages/ml/cnn_visuals.md"
+#           - NLP:
+#                 - Word Embedding: "pages/ml/word_embedding.md"
+#           - Code:
+#                 - Efficient Training: "pages/ml/efficient_training.md"
+#                 - Matrix Ops - NumPy vs PyTorch: "pages/ml/numpy_torch_ops.md"
     - SUTD:
           - SUTD Bookmarks: "pages/sutd/bookmarks.md"
-          - CS Education at SUTD:
-                - CSD TERM 4: "pages/sutd/csd_term4.md"
-                - CSD TERM 5: "pages/sutd/csd_term5.md"
-                - CSD TERM 6: "pages/sutd/csd_term6.md"
-                - CSD TERM 7: "pages/sutd/csd_term7.md"
-                - CSD TERM 8: "pages/sutd/csd_term8.md"
-    - MISC:
-          - SEA: "pages/hass/SEA.md"
+      #     - CS Education at SUTD:
+      #           - CSD TERM 4: "pages/sutd/csd_term4.md"
+      #           - CSD TERM 5: "pages/sutd/csd_term5.md"
+      #           - CSD TERM 6: "pages/sutd/csd_term6.md"
+      #           - CSD TERM 7: "pages/sutd/csd_term7.md"
+      #           - CSD TERM 8: "pages/sutd/csd_term8.md"
+#     - MISC:
+#           - SEA: "pages/hass/SEA.md"
