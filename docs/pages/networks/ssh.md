@@ -26,12 +26,13 @@ Reference: [www.ssh.com/ssh/public-key-authentication](https://www.ssh.com/ssh/p
 
 Run `ssh-keygen -t rsa` in terminal and follow its instructions,
 
-or `ssh-keygen -t rsa -b 4096` for extra enhanced security.
+or `ssh-keygen -t ed25519 -C "your_email@example.com"`
 
 >- `-t` “Type” This option specifies the type of key to be created. Commonly used values are:
 >   - `rsa` for RSA keys
 >   - `dsa` for DSA keys
 >   - `ecdsa` for elliptic curve DSA keys
+>   - `ed25519` for EdDSA (fast & secure)
 >
 >
 >- `-b` “Bits” This option specifies the number of bits in the key. The regulations that govern the use case for SSH may require a specific key length to be used. In general, 2048 bits is considered to be sufficient for RSA keys.

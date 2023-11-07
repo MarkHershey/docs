@@ -29,9 +29,10 @@ gpg --export-secret-keys KEY_ID_HERE > private.key
 ```
 
 ```
-gpg --import private.key
+gpg --batch --import private.key
 ```
 
+- [GNUPG2 import error](https://superuser.com/a/1327486)
 
 ## Manage Multiple GPG Keys
 
