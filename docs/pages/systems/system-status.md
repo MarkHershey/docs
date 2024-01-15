@@ -43,11 +43,11 @@ free -g | awk '/^Mem:/ {print $2}'
 ## Get the Total Space of all Disks
 
 ```bash
-df -h --total | grep 'total' | awk '{print $2}'
+df -h -x tmpfs -x squashfs -x devtmpfs -x vfat -x efivarfs --total | grep 'total' | awk '{print $2}'
 ```
 
 ## Get the Total Free Space of all Disks
 
 ```bash
-df -h --total | grep 'total' | awk '{print $4}'
+df -h -x tmpfs -x squashfs -x devtmpfs -x vfat -x efivarfs --total | grep 'total' | awk '{print $4}'
 ```
