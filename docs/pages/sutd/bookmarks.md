@@ -1,7 +1,7 @@
 # SUTD Bookmarks
 
 !!! note ""
-    Last Updated: `24 Aug 2022`
+    Last Updated: `14 Feb 2024`
 
 ## Campus Internet Access
 
@@ -16,9 +16,9 @@
 
 ## Academics
 
-- [MyPortal](https://myportal.sutd.edu.sg/psp/EPPRD/?cmd=login&languageCd=ENG)
-- [MS Office 365](http://portal.sutd.edu.sg/)
-- [eDimensions](https://edimension.sutd.edu.sg/webapps/login/)
+- [MyPortal](https://myportal.sutd.edu.sg) --> Access via [EASE](https://ease.sutd.edu.sg)
+- MS Office 365 --> Access via [EASE](https://ease.sutd.edu.sg)
+- [eDimensions](https://edimension.sutd.edu.sg/webapps/login/) --> Access via [EASE](https://ease.sutd.edu.sg)
 - [SUTD Library](https://mylibrary.sutd.edu.sg)
 - [GEMS - Graduate Employment Management System](https://sutd-csm.symplicity.com/students/index.php)
 - [LC - Learning Catalytics](https://learningcatalytics.com/sign_in?login=true)
@@ -38,7 +38,7 @@
 
 ## SUTD Housing
 
-- [SUTD Housing Portal](https://hms.sutd.edu.sg/studentportal/Default.aspx?Params=L9ezxPcQnQuRGKTzF%2b4sxeNblvAA%2b26c)
+- [SUTD Housing Portal](https://hms.sutd.edu.sg/)
 - SUTD Hostel Air-con Credit Top-up
     -  NEW: [https://nus-utown.evs.com.sg/SUTD/](https://nus-utown.evs.com.sg/SUTD/)
     -  OLD: [http://sutd.evs.com.sg](http://sutd.evs.com.sg)
@@ -47,7 +47,7 @@
 
 ## SUTD IT services
 
-- [SUTD - EASE](https://ease.sutd.edu.sg/app/UserHome)
+- [SUTD - EASE](https://ease.sutd.edu.sg/)
 - [SUTD - VPN](https://sutdvpn.sutd.edu.sg/remote)
 
     !!! info ""
@@ -104,6 +104,6 @@
 
 - [ROOT - SUTD Student Government](https://root.sutd.edu.sg/)
 - [OpenSUTD](https://opensutd.org/)
-- [3DC - Digital Design & Development Club, Developer Student Club](https://3dcdsc.github.io/About/)
+- [3DC - Digital Design & Development Club, Developer Student Club](https://3dcdsc.github.io/)
 - [SOAR - SUTD Organization of Autonomous Robotics](https://soar.opensutd.org/)
 - [MRS - Multi Rotor SUTD](https://multirotorsociety.github.io/)
