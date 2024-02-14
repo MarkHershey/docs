@@ -7,7 +7,10 @@
 
 !!! info ""
     - Username: `100xxxx` (**Student ID**, A.K.A. **Network ID**)
-    - Password: `xxxxxxxxx` (**Network ID** password)
+    - Password: `xxxxxxxxx` (your password)
+    - EAP method: `PEAP`
+    - Phase 2 authentication: `MSCHAPV2`
+    - Domain: `sutd.edu.sg`
 
 ---
 
@@ -36,12 +39,9 @@
 ## SUTD Housing
 
 - [SUTD Housing Portal](https://hms.sutd.edu.sg/studentportal/Default.aspx?Params=L9ezxPcQnQuRGKTzF%2b4sxeNblvAA%2b26c)
-- [SUTD Hostel Air-con Credit]((https://nus-utown.evs.com.sg/SUTD/))
-
-    !!! info ""
-        - Original site: [http://sutd.evs.com.sg](http://sutd.evs.com.sg)
-        - New alternative site: [https://nus-utown.evs.com.sg/SUTD/](https://nus-utown.evs.com.sg/SUTD/)
-
+- SUTD Hostel Air-con Credit Top-up
+    -  NEW: [https://nus-utown.evs.com.sg/SUTD/](https://nus-utown.evs.com.sg/SUTD/)
+    -  OLD: [http://sutd.evs.com.sg](http://sutd.evs.com.sg)
 
 ---
 
