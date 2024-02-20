@@ -1,15 +1,17 @@
 # SUTD Bookmarks
 
 !!! note ""
-    Last Updated: `14 Feb 2024`
+    Last Updated: `20 Feb 2024`
 
 ## Campus Internet Access
 
 !!! info ""
     - Username: `100xxxx` (**Student ID**, A.K.A. **Network ID**)
     - Password: `xxxxxxxxx` (your password)
+    - Security: `WPA2 Enterprise`
     - EAP method: `PEAP`
-    - Phase 2 authentication: `MSCHAPV2`
+    - PEAP version: `Automatic`
+    - Phase 2 (inner) authentication: `MSCHAPV2`
     - Domain: `sutd.edu.sg`
 
 ---
@@ -32,7 +34,8 @@
 - [SUTD FAB Lab Booking System](https://edbooking.sutd.edu.sg/fablabbooking/Web/)
 - [SUTD ED Booking Systems (incl. Fab Lab, Academic Media Studio, STEM Lab, Clean Room)](https://edbooking.sutd.edu.sg/edsystems/)
 - [SUTD Facility Booking System](https://usermgmtsys.sutd.edu.sg/login)
-- [SUTD Research Seating Management System](https://rsms.sutd.edu.sg/)
+- [SUTD Research Seating Management System](https://rsms.sutd.edu.sg/) (requires SUTD network and default DNS)
+- [Room Access Management System (RAMS)](https://wfms.sutd.edu.sg:8100/Runtime/Runtime/Form/RAR.SMF.Home/?) (requires SUTD network and default DNS) (for booking under Office of Research)
 
 ---
 
