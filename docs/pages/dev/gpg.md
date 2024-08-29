@@ -44,6 +44,8 @@ then, type `trust` and follow the instructions.
 
 - Reference: [trust](https://unix.stackexchange.com/a/407070)
 
+This looks like a more comprehensive summary on how to do it properly: [Killeroid's Gist](https://gist.github.com/Killeroid/6361944d0694e474fb94cc42a3b119d1)
+
 ## Manage Multiple GPG Keys
 
 References:
