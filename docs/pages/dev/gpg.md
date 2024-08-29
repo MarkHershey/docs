@@ -32,7 +32,17 @@ gpg --export-secret-keys KEY_ID_HERE > private.key
 gpg --batch --import private.key
 ```
 
-- [GNUPG2 import error](https://superuser.com/a/1327486)
+- The arg `--batch` is required, here is why: [GNUPG2 import error](https://superuser.com/a/1327486)
+
+After importing the key, trusting the key is required:
+
+```
+gpg --edit-key user@example.com
+```
+
+then, type `trust` and follow the instructions.
+
+- Reference: [trust](https://unix.stackexchange.com/a/407070)
 
 ## Manage Multiple GPG Keys
 
