@@ -1,6 +1,7 @@
 # docs - Why Not Document It
 
-![](https://github.com/MarkHershey/docs/workflows/deploy-page/badge.svg?branch=master)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/MarkHershey/docs/deploy.yml)
+
 
 ## Dependencies 
 
