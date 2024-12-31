@@ -113,7 +113,7 @@ This looks like a more comprehensive summary on how to do it properly: [Killeroi
 
 1. Decrypt the backup
     ```bash
-    gpg -d gpg-complete-backup.tar.gz > gpg-complete-backup-decrypted.tar.gz
+    gpg -d gpg-complete-backup.tar.gz.gpg > gpg-complete-backup-decrypted.tar.gz
     tar xzf gpg-complete-backup-decrypted.tar.gz
     ```
 
