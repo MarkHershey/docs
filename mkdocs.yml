@@ -1,7 +1,7 @@
 # Site Information
 site_name: "WNDI"
-site_description: "Mark Huang's Personal Documentation"
-site_author: Mark Huang
+site_description: "Personal Dev Documentation"
+site_author: Mark H. Huang
 docs_dir: docs/
 
 # GitHub repository button (shown at the top-right corner)
@@ -9,7 +9,7 @@ docs_dir: docs/
 # repo_url: 'https://github.com/MarkHershey/docs'
 
 # Copyright Declaration (shown at the end of the page)
-copyright: "Mark Huang &copy; 2019-2023. All Rights Reserved."
+copyright: "Mark H. Huang &copy; 2019-2025. All Rights Reserved."
 
 # Footer Customization
 extra:
@@ -61,6 +61,7 @@ theme:
         - navigation.tabs
         - navigation.expand
         - navigation.sections
+        - content.code.copy
     palette:
         - scheme: default
           primary: teal

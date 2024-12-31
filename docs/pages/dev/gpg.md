@@ -21,6 +21,17 @@ References:
 
 ## Generate a new GPG key
 
+We first set `GPG_TTY` to the current TTY to ensure prompt for passphrase does not fail.
+
+```bash
+export GPG_TTY=$(tty)
+```
+
+Here we specify the key type and subkey type for the key generation.
+
+- `Ed25519` for the primary key (for signing)
+- `Curve25519` for the subkey (for encryption).
+
 1. Create a configuration file for key generation
     ```bash
     cat > key.config << EOF
@@ -36,9 +47,7 @@ References:
     %commit
     EOF
     ```
-    > Above configuration specifies `Ed25519` for the primary key (for signing) and `Curve25519` for the subkey (for encryption).
-    > 
-    > `%no-protection` can be added above `%commit` to skip the passphrase protection.
+    - Additional line `%no-protection` can be added above `%commit` to skip the passphrase protection. 
 2. Generate the key
     ```bash
     gpg --batch --gen-key key.config
@@ -177,3 +186,33 @@ References:
 - [How many OpenPGP keys should I make?](https://security.stackexchange.com/a/29858)
 - [What is the best way to manage gpg keys across multiple devices?](https://security.stackexchange.com/a/59083)
 - [Should I create separate GPG key pairs or just one GPG key pair for multiple uses (e.g. email, sign commits)?](https://superuser.com/a/1683800)
+
+
+## File Encryption and Signing
+
+### Encrypt and sign a file for someone
+
+Before you encrypt a file, you need to know the recipient's public key and import it.
+
+```bash
+gpg --recipient KEY_ID_HERE --encrypt --sign --armor FILE_NAME_HERE
+```
+
+- `--recipient KEY_ID_HERE` (or `-r KEY_ID_HERE`) specifies the public key to which you want to encrypt.
+- `--sign` uses your private key to sign the file, allowing the recipient to verify that it was indeed you who sent it.
+- `--armor` wraps the output in ASCII armor (text form), which is handy for sending via email or other text-based channels.
+
+### Encrypt a file for multiple recipients
+
+```bash
+gpg --recipient KEY_ID_A --recipient KEY_ID_B --encrypt --sign --armor FILE_NAME_HERE
+```
+
+- You can list as many `--recipient` options as you want.
+- Each recipient will be able to decrypt the file using their private key.
+
+### Decrypt a file for yourself
+
+```bash
+gpg --decrypt FILE_NAME_HERE > decrypted.txt
+```
