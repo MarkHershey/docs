@@ -33,10 +33,12 @@ References:
     Name-Real: Your Name
     Name-Email: your.email@example.com
     Expire-Date: 0
-    %no-protection
     %commit
     EOF
     ```
+    > Above configuration specifies `Ed25519` for the primary key (for signing) and `Curve25519` for the subkey (for encryption).
+    > 
+    > `%no-protection` can be added above `%commit` to skip the passphrase protection.
 2. Generate the key
     ```bash
     gpg --batch --gen-key key.config
@@ -53,33 +55,24 @@ References:
 - [Telling Git about your signing key](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key)
 - [Signing commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits)
 
-## Backup and Import your own (private) key
 
-1. List your keys
-    ```bash
-    gpg --list-secret-keys --keyid-format=long
-    ```
-2. Export private key (includes all subkeys)
-    ```bash
-    gpg --export-secret-keys KEY_ID_HERE > private.key
-    ```
-3. Import the key
-    ```bash
-    gpg --batch --import private.key
-    ```
-   - The arg `--batch` is required, here is why: [GNUPG2 import error](https://superuser.com/a/1327486)
+## Export Your Public Key
 
-4. After importing the key, trusting the key is required:
-    ```bash
-    gpg --edit-key user@example.com
-    ```
-   - then, type `trust` and follow the instructions, set the trust level to 5 (ultimate trust) for your own key.
-   - Reference: [trust](https://unix.stackexchange.com/a/407070)
+```bash
+gpg --armor --export KEY_ID_HERE > my_public_key.asc
+```
 
-This looks like a more comprehensive summary on how to do it properly: [Killeroid's Gist](https://gist.github.com/Killeroid/6361944d0694e474fb94cc42a3b119d1)
+## Import Other's Public Key
 
+```bash
+gpg --import KEY_FILE_HERE
+```
 
-## Complete Backup and Import
+## Complete Backup and Transfer Your GPG Keys
+
+???+ warning
+
+    This section is for backup and transfer all of your GPG keys, which includes all your own key pairs (both private and public) and imported (public) keys if any.
 
 ### Export on Original Computer
 
@@ -101,6 +94,7 @@ This looks like a more comprehensive summary on how to do it properly: [Killeroi
 4. Create a secure archive
     ```bash
     tar -czf gpg-complete-backup.tar.gz private.gpg all_public_keys.gpg trust.txt
+    export GPG_TTY=$(tty) # if headless, this is required
     gpg -c gpg-complete-backup.tar.gz  # Encrypt the archive with a passphrase
     ```
 
@@ -109,10 +103,13 @@ This looks like a more comprehensive summary on how to do it properly: [Killeroi
     shred -u private.gpg all_public_keys.gpg trust.txt gpg-complete-backup.tar.gz
     ```
 
+    > `shred` can be installed on MacOS via `brew install coreutils`
+
 ### Import on New Computer
 
 1. Decrypt the backup
     ```bash
+    export GPG_TTY=$(tty) # if headless, this is required
     gpg -d gpg-complete-backup.tar.gz.gpg > gpg-complete-backup-decrypted.tar.gz
     tar xzf gpg-complete-backup-decrypted.tar.gz
     ```
@@ -134,14 +131,43 @@ This looks like a more comprehensive summary on how to do it properly: [Killeroi
 
 5. Verify the setup
     ```bash
-    gpg --list-secret-keys  # Should show your private keys
-    gpg --list-keys        # Should show all public keys
+    gpg --list-secret-keys
+    gpg --list-keys 
     ```
 
 6. Clean up
     ```bash
     shred -u private.gpg all_public_keys.gpg trust.txt gpg-complete-backup-decrypted.tar.gz
     ```
+
+References:
+
+- [Killeroid's Gist](https://gist.github.com/Killeroid/6361944d0694e474fb94cc42a3b119d1)
+- [Edit trust level manually](https://unix.stackexchange.com/a/407070)
+- [GNUPG2 import error](https://superuser.com/a/1327486)
+
+
+## Delete a GPG key
+
+### Check existing keys
+
+```bash
+# check all public keys
+gpg --list-keys
+
+# check my secret keys
+gpg --list-secret-keys
+```
+
+### Delete a key
+
+```bash
+# delete a public key
+gpg --delete-key KEY_ID_HERE
+
+# delete a secret key
+gpg --delete-secret-key KEY_ID_HERE
+```
 
 ## Manage Multiple GPG Keys
 
